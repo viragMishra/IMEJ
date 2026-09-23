@@ -1,4 +1,3 @@
-
 %% IMEJ-Apr18.tex
 %% V1.0
 %%
@@ -226,6 +225,7 @@
 % *** PDF, URL AND HYPERLINK PACKAGES ***
 %
 \usepackage{url}
+\usepackage{xcolor}
 % url.sty was written by Donald Arseneau. It provides better support for
 % handling and breaking URLs. url.sty is already installed on most LaTeX
 % systems. The latest version and documentation can be obtained at:
@@ -241,18 +241,34 @@
 
 % correct bad hyphenation here
 \hyphenation{infla-mmable}
-
-
 \begin{document}
 %
 % Apply reference list directives (see example.bib and http://mirror.ox.ac.uk/sites/ctan.org/macros/latex/contrib/IEEEtran/bibtex/IEEEtran_bst_HOWTO.pdf)
 \bstctlcite{IEEEexample:BSTcontrol}
 %
+\newcommand{\IMEJpaperid}{PAPER-ID}
+\renewcommand{\thepage}{\IMEJpaperid-\arabic{page}}
+\makeatletter
+\def\@IMEJheaderstyle{\normalfont\scriptsize\color{gray}}
+\makeatother
+%
+\newcommand{\IMEJconferenceheader}{%
+  \shortstack[l]{%
+    \scriptsize\bfseries ICOE OEE 2026 - INTERNATIONAL CONFERENCE ON OCEAN ENERGY \& OCEAN ENERGY EUROPE\\
+    \scriptsize\bfseries 5--7 OCTOBER 2026, THE HAGUE}}
+\makeatletter
+\def\ps@IMEJtitlepagestyle{%
+  \def\@oddhead{\hbox{}\normalfont\scriptsize\color{gray}\IMEJconferenceheader\hfil\thepage}%
+  \def\@evenhead{\normalfont\scriptsize\color{gray}\thepage\hfil\IMEJconferenceheader\hbox{}}%
+  \let\@oddfoot\@empty
+  \let\@evenfoot\@empty}
+\makeatother
 % paper title
 % Only the first word (and proper nouns) of titles are capitalized.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{How to prepare your article for the International Marine Energy Journal\\(January 2018)}
+\title{DESIGN AND NUMERICAL ANALYSIS OF A SUB-SURFACE TWO-BODY WAVE ENERGY CONVERTOR
+}
 %
 %
 % author names
@@ -264,13 +280,15 @@
 % was not built to handle multiple paragraphs
 %
 
-\author{First A. Author,
-        Second B. Author,
-        and~Third C. Author% <-this % stops a space
-\thanks{This paragraph of the first footnote will contain the date on which you submitted your paper for review and the open access licence (CC~BY). It will also contain support information, including sponsor and financial support acknowledgement. For example, `This work was supported in part by the EPSRC under grant...'}% <-this % stops a space
-\thanks{The next few paragraphs should contain the authors’ current affiliations, including current address and e-mail. For example, F. A. Author is with the Energy and Environmental Sciences Branch Space and Naval Warfare Systems Center Pacific 53560 Hull Street San Diego, CA, 92152 U.S.A (e-mail: f.a.author@domain.tld).}% <-this % stops a space
-\thanks{S. B. Author was at the French Research Institute for Exploitation of the Sea (IFREMER) Centre Manche---Mer du Nord, Boulogne sur Mer FR-62321, France. They are now at College of Engineering, Ocean University of China, Qingdao, China, 266100 (e-mail: s.b.author@domain.tld).}% <-this % stops a space
-\thanks{T. C. Author is with Department of Physical Oceanography, CICESE, Carretera Ensenada-Tijuana 3918, Ensenada, Baja California, Mexico (e-mail: t.c.author@domain.tld).}
+\author{Virag Mishra,
+        Michael Kelly,
+        Joseph Piacenza,
+        and~Solomon C. Yim% <-this % stops a space
+\thanks{The authors would like to thank Department of Defense, NAVSEA-BEST, NSWCCD, NIWC PAC, NAVFAC EXWC and U.S. DoD contractor Battelle. This work is supported under NAVSEA Contract Number: N66001-18-9-4703.}% <-this % stops a space
+\thanks{V. Mishra is with the Oregon State University, Corvallis, OR 97331, U.S.A (e-mail: virag.mishra@oregonstate.edu).}% <-this % stops a space
+\thanks{Michael Kelly is with the Dolphin Labs, San Diego, CA 92101, U.S.A (e-mail: michael@dolphinlabs.tech)}% <-this % stops a space
+\thanks{Joseph Piacenza is with the Oregon State University, Corvallis, OR 97331, U.S.A (e-mail: joseph.piacenza@oregonstate.edu)}% <-this % stops a space
+\thanks{Solomon C. Yim is with the Oregon State University, Corvallis, OR 97331, U.S.A (e-mail: solomon.yim@oregonstate.edu)}
 } % close \author
 
 
@@ -291,8 +309,10 @@
 
 
 % The paper headers
-\markboth{International Marine Energy Journal,~Vol.~VV, No.~NN, Month~Year}%
-{First-author-surname \MakeLowercase{\textit{et al.}}: Paper-title}
+\markboth{\parbox[t]{0.88\textwidth}{\raggedleft
+PROCEEDINGS OF THE INTERNATIONAL CONFERENCE ON OCEAN ENERGY \& OCEAN ENERGY EUROPE\\
+5--7 OCTOBER 2026, THE HAGUE}}%
+{First\_AUTHOR\_SURNAME \MakeLowercase{\textit{et al.}}: PAPER\_TITLE}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
 % 
@@ -321,12 +341,12 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-These instructions give you guidelines for preparing papers for IMEJ. Use this document as a template if you are using \LaTeX. Otherwise, use this document as an instruction set. The electronic file of your paper may be formatted further at IMEJ. Paper titles should have only the first letter and proper nouns in capitals, not each word capitalized or all uppercase. Avoid writing long formulas with subscripts in the title. Initials and surname are required. Put a space between authors’ initials. The abstract must be a concise yet comprehensive reflection of what is in your article. In particular, the abstract must be self-contained, without abbreviations, footnotes, or references. It should be a microcosm of the full article. The abstract must be between 150--250 words. Be sure that you adhere to these limits; otherwise, you will need to edit your abstract accordingly. The abstract must be written as one paragraph, and should not contain displayed mathematical equations or tabular material. The abstract should include three or four different keywords or phrases, as this will help readers to find it. Ensure that your abstract reads well and is grammatically correct.
+Recent developments in self-reacting oscillating Wave Energy Convertors (WECs) point toward two popular design concepts. These designs are either semi-submerged system in which a surface piercing float reacts against a relatively still heave plate or a single body system that reacts against the ocean floor.  The first design employs a rigid spar connection between the actuator and the reaction body; however, the second design uses a flexible belt connection between the actuator and the foundation. In this work, a two-body sub-surface WEC is proposed in which the submerged float reacts against a base that is dynamically active. The dynamics of the reacting body is influenced by both the buoyancy parameters and the PTO generated tether tension. As a result, the two-body system oscillates in an antipodal mode. The optimal hydrostatic conditions that result in a design that can generate mechanical power, in single degree of freedom motion, under the wave excitation are discussed in this work. The hydrodynamic analysis is carried out for different wave conditions observed off the coast of US. Optimal PTO parameters are determined for various designs. The analysis is carried out using Ansys-Aqwa. Observations of the relative predictive performance between the two numerical simulations models are delineated.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IMEJkeywords}
-Enter at least three key words or phrases in alphabetical order, separated by commas.
+Hydrodynamics, Power Take Off (PTO), Wave Energy Converter (WEC)
 \end{IMEJkeywords}
 
 
@@ -346,29 +366,53 @@ Enter at least three key words or phrases in alphabetical order, separated by co
 % by the rest of the first word in caps.
 % Here we have a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IMEJPARstart{T}{his} document is a template for \LaTeX\ using IMEJ.cls version 1.0 and later. If you are reading a paper or PDF version of this document, please download the package, IMEJ-template-Jan18.zip, from the IMEJ web site at \url{marineenergyjournal.org} so you can use it to prepare your manuscript. If you would prefer to use \textit{LibreOffice Writer} or \textit{Microsoft Word}, download the appropriate template from the same web page. 
-The style file IMEJ-template-Jan18.cls (included in the package) will adjust your fonts and line spacing. Do not change the font sizes or line spacing to squeeze more text into a limited number of pages. Use italics for emphasis; do not underline. 
-Section and subsection headings should have only the first letter and proper nouns in capitals, not each word capitalized or all uppercase. The first word of the first section is capitalized, with the first letter as a `drop cap' spanning two lines.  Therefore you must have at least two lines in the paragraph with the drop letter.
+\IMEJPARstart{D}{ue} to the concerted effort to achieve energy independence as well as to reduce the greenhouse gas emission, most of the development to date in offshore renewable energy systems has been targeted at “utility-scale” or “community-scale” devices. These devices have electricity generation capacities in the order of MW and kW respectively. However, another application area that is attracting investment in wave energy converters is “small-scale” devices. These devices can provide autonomous power to various ocean-bound systems, such as autonomous underwater vehicles~\cite{chen2024unified}, observation systems~\cite{doe2018wind}, and even aquaculture farms. The expectation is that these devices can be used to power the on-site stand-alone systems which are located remotely, resulting in exponential growth in the sector often referred as “Blue economy”\cite{green2019enabling,cavagnaro2020powering}.
+This paper provides an overview of the initial design process of such a device. First, the primary dimension of the device is derived based on the constraints of the operating design (Sect. yyy). The details of the deployment sites are discussed in (Sect. xxxxxx). The results and the following discussion are presented in (Sect. zzzz). This project is funded by the NAVSEA, as a one-year grant to design a sub-surface WEC capable of continuous power generation of 100W at various sites with distinct wave characteristics off the coast of the United States.
 
-\subsection{Abbreviations and acronyms}
-Define abbreviations and acronyms the first time they are used in the text, even after they have already been defined in the abstract. Abbreviations such as IMEJ, 3D, and GIS do not have to be defined. Abbreviations that incorporate periods should not have spaces: write `C.N.R.S.,' not `C. N. R. S.' Do not use abbreviations in the title unless they are unavoidable.
+\section{Background}
+Numerical benchmarking of eight WECs with different working principles was conducted to evaluate their power matrices and site specific annual energy production~\cite{babarit2012}. Out of these, two operated close to sea-bed and only one was near surface submerged WECs. This shows that the focus has mainly been around floating devices. Some of the popular floating WECs with heave plate are MBARI-WEC~\cite{hamiltonMBARIWECPowerSource2021}, OPT Powerbuoy, OSU-Lupa (Laboratory Upgrade Point Absorber)~\cite{beringer_numerical_2026} and Wavebob~\cite{beatty_wave_2019}. 
 
-% needed in second column of first page if using \IMEJpubid
-%\IMEJpubidadjcol
 
-\subsection{Other recommendations}
-Use one space after periods and colons. Hyphenate complex modifiers: `cube-root-mean-cube.' Avoid dangling participles, such as, `Using (1), the power was calculated.' [It is not clear who or what used (1).] Write instead, `The potential was calculated by using (1),' or `Using (1), we calculated the potential.' 
-Use a zero before decimal points: `0.25', not `.25.' Use `m$^3$,' not `cumec.' Indicate dimensions as `0.1 km\texttimes0.2 km,' not `0.1\texttimes0.2 km$^2$.' The abbreviation for `seconds' is `s,' not `sec.' Use `kW/m$^2$' or `kilowatts per square meter,' not `kilowatts/m$^2$.' When expressing a range of values, write `7 to 9' or `7--9,' not `7{\textasciitilde}9.'
-A parenthetical statement at the end of a sentence is punctuated outside of the closing parenthesis (like this). (A parenthetical sentence is punctuated within the parentheses.) Avoid contractions; for example, write `do not' instead of `don’t.' The serial (or `Oxford') comma is not required in lists.
-If you wish, you may write in the first person singular or plural and use the active voice (`I observed that ...' or `We observed that ...' instead of `It was observed that ...'). Remember to check spelling. If your first language is not English, please get an appropriate person to carefully proofread your paper.
+Though the wave energy decays exponentially with depth in deep water regime, subsurface WECs provide the potential benefit of survivability and covertness. Possibly these are reasons why subsurface WECs are emerging as a preferred design choice for WEC developers. Some of the popular designs that are either bottom fixed or do not have a heave plate as reacting bodies are AWS Ocean Energy’s Archimedes Waveswing, Symphony Wave Power’s WEC, Carnegie Clean Energy’s CETO 6~\cite{sergiienkoOptimalArrangementMooring2016}, and CalWave’s xWave. CETO6 and xWave are multi tethered, multi DOF point absorbers which operate close to the surface. The Waveswing is an air pressure differential point absorber tethered to the sea bed and Symphony Wave Power’s WEC is a bottom-fixed device operating in shallow waters.
+Conceptual submerged WEC capable of producing 10~W of power with a float and six trubines has been proposed in~\cite{jmse12010137}.
+\par In all the buoyant designs mentioned above the buoyancy of the float acts as the actuation force and either the foundation in the sea bed or the heave plate acts as a reaction body. In this work we propose a two-body submerged system with a float and heave plate connected by a tether and the entire system is moored to the foundation. The float will act as an actuator and the buoyancy of the heave plate will aid to power generation. This work will evaluate the performance for the above described WEC and compare six different design candidates at different wave energy sites in the US. 
 
-\section{Mathematical formulae}
-\subsection{Equations}
-Number equations consecutively with equation numbers in parentheses flush with the right margin, as in (1). First use the equation editor to edit the equation. Then add an un-labelled caption, which must then be cut and paste into the final column. To make your equations more compact, you may use the solidus ( / ), the exp() function, or appropriate exponents. Use parentheses to avoid ambiguities in denominators.
-Be sure that the symbols in your equation have been defined before the equation appears or immediately following. Italicize symbols (T might refer to temperature, but T is the unit tesla). Refer to `(1),' not `Eq.~(1)' or `equation~(1),' except at the beginning of a sentence: `Equation~(1) is ... .'
+\section{Device Details}
+The WEC design under study is a two-body point absorber consisting of a submerged float and a heave plate. The design of the WEC supports the sub-surface operation.
+\begin{figure}[!t]
+\centering
+\includegraphics[scale=1.6]{images/design.png}
+\caption{Sketch of the two-body sub-surface WEC under analysis}
+\label{fig_QP}
+\end{figure}
 
-\section{Units}
-Use SI (MKS) as primary units. Imperial units may be used as secondary units (in parentheses). An exception is when Imperial units are used as identifiers in trade, such as `3{\textonehalf}-in pipe.' Avoid combining SI and CGS units, such as flow in cm/s. This often leads to confusion because equations do not balance dimensionally. If you must use mixed units, clearly state the units for each quantity in an equation.
+\section{Wave Climate at deployment locations}
+Based on the works of~\cite{alday2024effects} on wave resource assessment off the coast of US North West, a set of guidelines were developed and included in a technical specification for wave resource assessment by International Electrotechnical Commission (IEC)~\cite{iec62600_101_2024}. The IEC brings together international marine energy experts to develop consensus-based standards that guide the development of a broad range of sectors. The current industry consensus is determination of representative sea states based on the energy weighted joint probability distribution function of primarily $H_{s}$ and $T_{e}/T_{P}$~\cite{robertson2021holistic}. 
+However, the true description of a sea state should involve additional parameters such as spectral shape, peak direction, directional spreading, wind, tide, and current; yet data to fully characterize these aspects are often unavailable. Even when such data exist, current approaches neither develop a multidimensional probabilistic description of the deployment site nor account for energy-weighted probabilities, and they typically preclude the evaluation of WEC performance across multiple deployment climates. A need for developing a methodology that could account for multiple deployment locations was presented in a Wave Energy Prize competition by US Department of Energy in 2016. A new methodology was proposed in this competition by~\cite{bull2017wave} that applied a cluster analysis to scatter diagrams in order to determine a subset of sea states that could be scaled to find the average annual power flux at each wave climate. A common centroid representing of $H_{s}$ and $T_{P}$ was determined for the clusters. This procedure opens the possibility of using a single set of cluster centroid for different locations. Since WEC performance assessment simulations are computationally resource intensive, in this work the methodology described above is used to run simulations for a single set of cluster centroids and the power produced for each centroid is scaled depending on the site under consideration.
+\par
+A set of 18 sea states were considered in this report for all the analysis. The spectrum used to generate the wave is Bretschneider Spectrum. Although these different wave data are not all from the same physical conditions (e.g. depths range from $42$ m to $3200$ m) it provides an idea of the WEC performance in varied wave profiles, using the same data for each. Note that if using the weights in the 18 sea states, it makes up varying percentages of the total joint probability diagram ($67\%-95\%$). This is because in some locations there can be significant portions of the year in sea states not represented by the $18$ sea states. 
+
+Sea states that are representative of the U.S. Coast wave climates were selected. The locations were chosen to determine site specific optimal PTO coefficient for the WEC. In addition, these sites either host a testing facility or a deployment berth and are probable sites for the development of WEC farms. Sea state parameters reported by NDBC were used to analyze the wave climate at each buoy. The significant wave height reported by NDBC (and used here) is the average of the highest one-third of all the wave heights during a 20-minute sampling period. The peak period is the period with maximum energy in the spectrum. Lastly, the peak direction was used to determine relative wave scatter diagrams for each of the deployment locations. The list of the buoy locations chosen for the analysis is presented in Table~\ref{tab:nbdc_buoys}.
+\begin{table}[!t]
+\centering
+\renewcommand{\arraystretch}{1.15}
+\caption{NDBC BUOYS CHOSEN FOR ANALYSIS}
+\label{tab:nbdc_buoys}
+% \begin{tabular}{|p{10mm}|p{38mm}|p{10mm}|p{10mm}|} %86~mm
+\begin{tabular}{|c|p{30mm}|c|c|}
+\hline
+\textbf{NDBC Buoy} & \textbf{US Location} & \textbf{Depth [m]} & \textbf{Year} \\ \hline
+51207 & Oahu, HI & 81 & 2019 \\ \hline
+42001 & Mid Gulf, New~Orleans, LA & 32 & 2018 \\ \hline
+46050 & PACWAVE, OR & 149 & 2017 \\ \hline
+46254 & San Diego, CA & 46 & 2019 \\ \hline
+41009 & Canaveral, FL & 42 & 2011 \\ \hline
+44018 & Cape Cod, MA & 44 & 2010 \\ \hline
+\end{tabular}
+\end{table}
+\par
+A cluster analysis was applied to wave scatter diagrams to identify a representative subset of sea states that can be scaled to estimate the average annual power (AAP) flux. The subset is determined by minimizing the distance between each data point and its corresponding cluster centroid. Four pdist2 options for minimizing the distance function were compared these are Squared Euclidean, Standardized Euclidean, Eclidean and Mahalanobis.  This clustering is performed using the $k$-means algorithm implemented in the MATLAB Statistics Toolbox, where the number of clusters and the centroid values is specified by the user. The algorithm employs an iterative partitioning procedure that optimizes the associated memberships by minimizing the sum of point-to-centroid distances across all $k$ clusters. As a result, each sea state is assigned to the cluster whose distance to centroid yields the minimum value, providing an optimally representative classification of the wave climate. In this paper results corresponding to Mahalanobis method are presented. 
+
 
 \section{Some common mistakes}
 The word `data' is plural, not singular. A graph within a graph is an `inset,' not an `insert.' The word `alternatively' is preferred to the word `alternately' (unless you really mean something that alternates). Use the word `whereas' instead of `while' (unless you are referring to simultaneous events). Do not use the word `essentially' to mean `approximately' or `effectively.' Do not use the word `issue' as a euphemism for `problem.' 
@@ -518,7 +562,7 @@ As the IMEJ is an online-only journal, an author can publish colour figures on I
 %
 \section{References and footnotes}
 \subsection{References}
-In all references, the given name of the author or editor is abbreviated to the initial only and precedes the last name \cite{taylor1919}. Use them all; use et al. only if names are not given \cite{higgsBoson2015}. Abbreviate conference titles.  When referencing a patent, provide the day and the month of issue, or application. References should include enough information for the reader to find the original source. Do not combine references. There must be only one reference with each number \cite{falnes1991,castro1971,evans1987}. If there is a URL included with the print reference, it can be included at the end of the reference \cite{falnes1991,castro1971,evans1987,babarit2012}. 
+In all references, the given name of the author or editor is abbreviated to the initial only and precedes the last name \cite{taylor1919}. Use them all; use et al. only if names are not given \cite{higgsBoson2015}. Abbreviate conference titles.  When referencing a patent, provide the day and the month of issue, or application. References should include enough information for the reader to find the original source. Do not combine references. There must be only one reference with each number \cite{castro1971}. If there is a URL included with the print reference, it can be included at the end of the reference \cite{castro1971,babarit2012}. 
 
 Capitalize only the first word in a title, except for proper nouns and element symbols. For papers published in translation journals, please give the English citation first, followed by the original foreign-language citation.
 
@@ -549,8 +593,13 @@ Authors should consider the following points:
 \item Papers that describe ongoing work or announce the latest technical achievement, may not be appropriate for publication.  However, they may suitable for presentation at the European Wave and Tidal Energy Conference (\url{ewtec.org}), for example.
 \end{enumerate}
 
-\section{Conclusion}
-A conclusion section is not required. Although a conclusion may review the main points of the paper, do not replicate the abstract as the conclusion. A conclusion might elaborate on the importance of the work or suggest applications and extensions.
+\section{Discussion and Conclusion}
+This study investigated the hydrodynamic performance and design optimization of a submerged wave energy converter (WEC) equipped with a tether–PTO system. The report first introduced the overall system architecture, including the prime movers, tether specifications, PTO algorithm, and PTO parameters. A numerical modelling framework was then developed, covering the governing theory, model implementation, verification of the developed UDF and the selection of representative sea states for performance assessment. The mechanical average annual power capture at six different sites along the US coasts for different designs is compared.
+\par
+A comprehensive sensitivity analysis was conducted under both survival and operational sea states. The operational-state analysis examined the influence of key design parameters for six different designs of float and heave plate. These designs vary in characteristic dimensions. Several sensitivity analyses were carried out for different operating parameters, primarily the PTO coefficients, draft, initial tether length, mass ratio between float and heave plate and mass of heave plate. The results demonstrate that the hydrodynamic response and power capture of the submerged WEC are strongly influenced by both the system configuration and the PTO parameters. The sensitivity analyses showed that careful selection of key design parameters, including the geometric configuration, mass distribution, and the initial float–heave plate gap, can substantially enhance energy capture while maintaining acceptable structural loads and system stability. For a configuration that is submerged 2 m below the surface, the power capture at most of the sites for most of the PTO coefficients is more than the minimum targeted value (only location where power was lower was in San Diego). The variation of power capture at various depths and different tether lengths is also compared for two designs. A linear drop in the captured power is observed with an increase in the draft and increase in the initial tether length (over the range of 2-7 m submerged). The optimal PTO coefficient at six different sites around US were found out for maximum power capture.
+\par
+Overall, the validated numerical model and the comprehensive parametric analyses presented in this study provide a robust framework for optimizing submerged WEC designs, enabling an effective balance between energy production, structural integrity, operational reliability and survivability for site-specific deployment.
+
 
 
 %%% if you have a single appendix:
@@ -580,8 +629,11 @@ The second appendix text goes here. You can choose not to have a title for an ap
 
 % use section* for acknowledgment
 \section*{Acknowledgement}
-Use the singular heading even if you have many acknowledgements. Avoid expressions such as `One of us (S.B.A.) would like to thank ... .' Instead, write `F. A. Author thanks ... .' In most cases, sponsor and financial support acknowledgements are placed in the unnumbered footnote on the first page, not here. 
-This template was originally based on the IEEE Transactions template, by Michael Shell.  It has been significantly modified in terms of style, layout, policy and content.  It is not endorsed by any person or organization other than IMEJ.
+The authors would like to thank Department of Defense, NAVSEA-BEST, NSWCCD, NIWC PAC, NAVFAC EXWC and U.S. DoD contractor Battelle. This work is supported under NAVSEA Contract Number: N66001-18-9-4703.\newline
+Disclaimer:
+Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the Department of Defense.
+
+
 
 
 % Can use something like this to put references on a page
