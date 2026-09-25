@@ -118,6 +118,7 @@
 \usepackage{booktabs}
 \usepackage{threeparttable}
 
+\usepackage[autostyle=true]{csquotes}
 
 % *** SUBFIGURE PACKAGES ***
 \usepackage[caption=false,font=footnotesize]{subfig}
@@ -136,7 +137,7 @@
 % http://www.ctan.org/pkg/subfig
 
 
-% *** FLOAT PACKAGES ***
+% *** float PACKAGES ***
 %
 %\usepackage{fixltx2e}
 % fixltx2e, the successor to the earlier fix2col.sty, was written by
@@ -226,6 +227,8 @@
 %
 \usepackage{url}
 \usepackage{xcolor}
+\usepackage[english]{babel}
+
 % url.sty was written by Donald Arseneau. It provides better support for
 % handling and breaking URLs. url.sty is already installed on most LaTeX
 % systems. The latest version and documentation can be obtained at:
@@ -251,6 +254,9 @@
 \makeatletter
 \def\@IMEJheaderstyle{\normalfont\scriptsize\color{gray}}
 \makeatother
+%
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
 %
 \newcommand{\IMEJconferenceheader}{%
   \shortstack[l]{%
@@ -320,21 +326,13 @@ PROCEEDINGS OF THE INTERNATIONAL CONFERENCE ON OCEAN ENERGY \& OCEAN ENERGY EURO
 % *** name in the headers of peer review papers.                   ***
 % You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
 % you desire.
-
-
-
-
 % If you want to put a publisher's ID mark on the page you can do it like
 % this:
 %\IMEJpubid{0000--0000/00\$00.00~\copyright~2015 IEEE}
 % Remember, if you use this you must call \IMEJpubidadjcol in the second
 % column for its text to clear the IEEEpubid mark.
-
-
 % use for special paper notices
 %\IMEJspecialpapernotice{(Invited Paper)}
-
-
 % make the title area
 \maketitle
 
@@ -378,40 +376,115 @@ Conceptual submerged WEC capable of producing 10~W of power with a float and six
 \par In all the buoyant designs mentioned above the buoyancy of the float acts as the actuation force and either the foundation in the sea bed or the heave plate acts as a reaction body. In this work we propose a two-body submerged system with a float and heave plate connected by a tether and the entire system is moored to the foundation. The float will act as an actuator and the buoyancy of the heave plate will aid to power generation. This work will evaluate the performance for the above described WEC and compare six different design candidates at different wave energy sites in the US. 
 
 \section{Device Details}
-The WEC design under study is a two-body point absorber consisting of a submerged float and a heave plate. The design of the WEC supports the sub-surface operation.
+The WEC design under study is a two-body point absorber consisting of a submerged float and a heave plate. The design of the WEC supports the sub-surface operation.~The sketch of primary components used in the numerical modelling are shown in~\figref{fig_QP}. The float and heave plate are connected by a tether which is attached to the top of the heave plate and the bottom of the float. The heave plate is moored to the sea bed using a mooring line. The mooring line is attached to the bottom of the heave plate and the other end is attached to a foundation on the sea bed. The tether and mooring line are assumed to be linear elastic with a stiffness of $k$ and $0.1k$ respectively. The tether and mooring line are assumed to be massless and inextensible.
 \begin{figure}[!t]
 \centering
 \includegraphics[scale=1.6]{images/design.png}
 \caption{Sketch of the two-body sub-surface WEC under analysis}
 \label{fig_QP}
 \end{figure}
+\par
+To determine optimal device configuration multiple designs were analyzed. In this paper preliminary results for some of the designs considered are discussed and compared. The relative dimensions of the float and Heave Plate for various designs considered are shown in~\figref{fig_rectangle_comparison}. A summary of the important dimensions and characteristics of these designs are presented in~\tabref{tab:design_parameters}. $R_f$ and $R_{hp}$ are the radius of float and heave plate respectively and $H_f$, $H_{hp}$ are the height of float and heave plate. Similarly, $W_f$ and $W_{hp}$ are the weight of the float and heave plate. The primary difference between various designs is that the total weight of the design D0 was $8000$ kg, however the new designs are comparatively lighter in the range $2100$ kg (D1, D2), $2500$ kg (D3, D4) and (D5, D6) which is $2966$ kg. The tether tension in the design D0 was $23696$ N, which would increase the CAPEX cost as the cost is proportional to the tether cost. However, the tether tension in other designs is significantly lower. 
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{images/rectangle_comparison.png}
+\caption{Representative dimensions and designs of the float and heave plate for hydrodynamic analysis. The heave plate and float were connected to the tether not shown in the above image.}
+\label{fig_rectangle_comparison}
+\end{figure*}
+
+\begin{table*}[!t]
+\centering
+\caption{Design parameters and loading characteristics of the candidate WEC configurations.}
+\label{tab:design_parameters}
+\renewcommand{\arraystretch}{1.3}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{cccccccccc}
+\hline
+\textbf{Design} & \textbf{$W_f$} & \textbf{$W_{hp}$} & \textbf{$W_f+W_{hp}$} & \textbf{$R_f$} & \textbf{$R_{hp}$} & \textbf{$H_f$} & \textbf{$H_{hp}$} & \textbf{Tether} & \textbf{Mooring} \\
+& \textbf{(kg)} & \textbf{(kg)} & \textbf{(kg)} & \textbf{(m)} & \textbf{(m)} & \textbf{(m)} & \textbf{(m)} & \textbf{tension (N)} & \textbf{tension (N)} \\
+\hline
+D0 & 4000 & 4000 & 8000 & 1 & 1 & 2 & 0.5 & 23931 & 201 \\
+
+D1 & 700 & 1400 & 2100 & 0.777 & 1.5 & 0.482 & 0.184 & 2325 & 1601 \\
+
+D2 & 800 & 1600 & 2400 & 0.82 & 1.48 & 0.468 & 0.2 & 2092 & 172 \\
+
+D3 & 1500 & 1000 & 2500 & 1.5 & 1.35 & 0.3 & 0.06 & 6606 & 203 \\
+
+D4 & 1500 & 1000 & 2500 & 2.65 & 1.2 & 0.1 & 0.06 & 7466 & 358 \\
+
+D5 & 2066 & 900 & 2966 & 1.48 (max) & 1.35 & 1.027 (total) & 0.06 & 5782 & 289 \\
+
+D6 & 2066 & 900 & 2966 & 1.75 (max) & 1.35 & 0.853 (total) & 0.06 & 5782 & 277 \\
+\hline
+\end{tabular}%
+}
+\end{table*}
+
+\section{Numerical Modelling}
+Commercially available software~\enquote{Ansys-Aqwa\textregistered{}} was used to both calculate the frequency dependent parameters and to simulate the time-dependent dynamic behavior of the WEC.
+\subsection{Cable modelling}
+A linear elastic cable module in Aqwa is the simplest numerical model of an actual mooring line. Aqwa requires the user to specify the unstretched length instead of pretension for elastic tethers. With the knowledge of stiffness and pretension (calculated as the difference between the buoyancy and the weight of the float and Heave Plate), the stretched length can be determined.
+\begin{align}
+L^{t} &= \frac{(V_f-V_f^{disp})\rho_w g}{k} \label{eq:tether_stretched} \\
+L_0^{t} &= D_{hp}-(H_f+D_f)-L^{t} \label{eq:tether_unstretched} \\
+L^{m} &= \frac{(V_f+V_{hp})-(V_f^{disp}+V_{hp}^{disp})\rho_w g}{0.1k} \label{eq:mooring_stretched} \\
+L_0^{m} &= D-(D_{hp}+H_{hp})-L^{m} \label{eq:mooring_unstretched}
+\end{align}
+The stretched length $L^{t}$ of the tether and mooring can be calculated using~\eqref{eq:tether_stretched} and~\eqref{eq:mooring_stretched}. The initial unstretched length $L_0$ of the tether and mooring can be calculated using~\eqref{eq:tether_unstretched} and~\eqref{eq:mooring_unstretched} respectively. $V_x^{disp}$ is the displaced volume of the respective cylindrical geometry ($x$ can be either~\enquote{$f$} for float or~\enquote{$hp$} for heave plate.), $\rho_w$ is the density of water, $g$ is the acceleration due to gravity, $k$ is the stiffness of the tether, $D_{x}$ is the distance from the free surface to the respective cylindrical geometry, $H_x$ is the height of the respective cylindrical geometry.~$D$ is the depth of water at deployment location~(considered $=70$~m for all the simulations). 
+
+\subsection{PTO algorithm}
+The PTO system is modelled as a linear spring-damper system with a stiffness $K_{mech}$ and p $C_{mech}$. The mechanical spring force is given by:
+\begin{equation}
+F_{mech} = C + K_{mech} \Delta L
+\label{eq:mech_force}
+\end{equation}
 
 \section{Wave Climate at deployment locations}
 Based on the works of~\cite{alday2024effects} on wave resource assessment off the coast of US North West, a set of guidelines were developed and included in a technical specification for wave resource assessment by International Electrotechnical Commission (IEC)~\cite{iec62600_101_2024}. The IEC brings together international marine energy experts to develop consensus-based standards that guide the development of a broad range of sectors. The current industry consensus is determination of representative sea states based on the energy weighted joint probability distribution function of primarily $H_{s}$ and $T_{e}/T_{P}$~\cite{robertson2021holistic}. 
 However, the true description of a sea state should involve additional parameters such as spectral shape, peak direction, directional spreading, wind, tide, and current; yet data to fully characterize these aspects are often unavailable. Even when such data exist, current approaches neither develop a multidimensional probabilistic description of the deployment site nor account for energy-weighted probabilities, and they typically preclude the evaluation of WEC performance across multiple deployment climates. A need for developing a methodology that could account for multiple deployment locations was presented in a Wave Energy Prize competition by US Department of Energy in 2016. A new methodology was proposed in this competition by~\cite{bull2017wave} that applied a cluster analysis to scatter diagrams in order to determine a subset of sea states that could be scaled to find the average annual power flux at each wave climate. A common centroid representing of $H_{s}$ and $T_{P}$ was determined for the clusters. This procedure opens the possibility of using a single set of cluster centroid for different locations. Since WEC performance assessment simulations are computationally resource intensive, in this work the methodology described above is used to run simulations for a single set of cluster centroids and the power produced for each centroid is scaled depending on the site under consideration.
 \par
-A set of 18 sea states were considered in this report for all the analysis. The spectrum used to generate the wave is Bretschneider Spectrum. Although these different wave data are not all from the same physical conditions (e.g. depths range from $42$ m to $3200$ m) it provides an idea of the WEC performance in varied wave profiles, using the same data for each. Note that if using the weights in the 18 sea states, it makes up varying percentages of the total joint probability diagram ($67\%-95\%$). This is because in some locations there can be significant portions of the year in sea states not represented by the $18$ sea states. 
-
-Sea states that are representative of the U.S. Coast wave climates were selected. The locations were chosen to determine site specific optimal PTO coefficient for the WEC. In addition, these sites either host a testing facility or a deployment berth and are probable sites for the development of WEC farms. Sea state parameters reported by NDBC were used to analyze the wave climate at each buoy. The significant wave height reported by NDBC (and used here) is the average of the highest one-third of all the wave heights during a 20-minute sampling period. The peak period is the period with maximum energy in the spectrum. Lastly, the peak direction was used to determine relative wave scatter diagrams for each of the deployment locations. The list of the buoy locations chosen for the analysis is presented in Table~\ref{tab:nbdc_buoys}.
+\begin{figure}[h]
+\centering
+\includegraphics[height=0.17\textwidth, width=0.46\textwidth]{images/18seas.png}
+\caption{The sea states used for the analysis of WEC performance}
+\label{fig_18seas}
+\end{figure}
+A set of 18 sea states, shown in~\figref{fig_18seas}, was used throughout the analysis in this report. Wave elevations were generated using the Bretschneider spectrum. Although these wave datasets do not all correspond to the same water depth (ranges from $42$~m to $149$~m), they provide a useful indication of WEC performance across varied wave profiles, since the same set of sea states is applied at each location shown in~\figref{fig_location}. Note that when the weights associated with the $18$ sea states are used, they account for varying percentages of the total joint probability distribution ($67\%$--$95\%$), depending on location. This is because, at some locations, a significant portion of the year falls into sea states not represented within the $18$ sea states considered. 
+\par
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.22]{images/locations.png}
+\caption{Location of the NDBC buoys used for the analysis of wave climate}
+\label{fig_location}
+\end{figure}
+Site specific optimal PTO coefficient for the WEC are determined for each location shown in~\figref{fig_location}. These sites either host a testing facility or a deployment berth and are probable sites for the development of WEC farms.  The significant wave height reported by NDBC (and used here) is the average of the highest one-third of all the wave heights during a 20-minute sampling period. The peak period is the period with maximum energy in the spectrum. The list of the buoy locations chosen for the analysis is presented in~\tabref{tab:nbdc_buoys}.
+\par
 \begin{table}[!t]
 \centering
-\renewcommand{\arraystretch}{1.15}
-\caption{NDBC BUOYS CHOSEN FOR ANALYSIS}
+\renewcommand{\arraystretch}{1.3}
+\begin{threeparttable}
+\caption{NDBC buoys chosen for analysis}
 \label{tab:nbdc_buoys}
-% \begin{tabular}{|p{10mm}|p{38mm}|p{10mm}|p{10mm}|} %86~mm
-\begin{tabular}{|c|p{30mm}|c|c|}
-\hline
-\textbf{NDBC Buoy} & \textbf{US Location} & \textbf{Depth [m]} & \textbf{Year} \\ \hline
-51207 & Oahu, HI & 81 & 2019 \\ \hline
-42001 & Mid Gulf, New~Orleans, LA & 32 & 2018 \\ \hline
-46050 & PACWAVE, OR & 149 & 2017 \\ \hline
-46254 & San Diego, CA & 46 & 2019 \\ \hline
-41009 & Canaveral, FL & 42 & 2011 \\ \hline
-44018 & Cape Cod, MA & 44 & 2010 \\ \hline
+\begin{tabular}{cp{35mm}cc}
+\toprule
+\textbf{Buoy ID\tnote{*}} & \textbf{US Location} & \textbf{Depth [m]} & \textbf{Year} \\
+\midrule
+51207 & Oahu, HI & 81 & 2019 \\
+42001 & Mid Gulf, New~Orleans, LA & 32 & 2018 \\
+46050 & PACWAVE, OR & 149 & 2017 \\
+46254 & San Diego, CA & 46 & 2019 \\
+41009 & Canaveral, FL & 42 & 2011 \\
+44018 & Cape Cod, MA & 44 & 2010 \\
+\bottomrule
 \end{tabular}
+\begin{tablenotes}
+\item[*] All wave data comes from National Data Buoy Center (NDBC)
+\end{tablenotes}
+\end{threeparttable}
 \end{table}
-\par
-A cluster analysis was applied to wave scatter diagrams to identify a representative subset of sea states that can be scaled to estimate the average annual power (AAP) flux. The subset is determined by minimizing the distance between each data point and its corresponding cluster centroid. Four pdist2 options for minimizing the distance function were compared these are Squared Euclidean, Standardized Euclidean, Eclidean and Mahalanobis.  This clustering is performed using the $k$-means algorithm implemented in the MATLAB Statistics Toolbox, where the number of clusters and the centroid values is specified by the user. The algorithm employs an iterative partitioning procedure that optimizes the associated memberships by minimizing the sum of point-to-centroid distances across all $k$ clusters. As a result, each sea state is assigned to the cluster whose distance to centroid yields the minimum value, providing an optimally representative classification of the wave climate. In this paper results corresponding to Mahalanobis method are presented. 
+
+Occurrence data reported by NDBC buoys were used to calculate the annual average power at that location. A cluster analysis was applied to wave scatter diagrams to identify a representative subset of sea states that can be scaled to estimate the average annual power (AAP) flux. The subset is determined by minimizing the distance between each data point and its corresponding cluster centroid. Four pdist2 options for minimizing the distance function were compared these are Squared Euclidean, Standardized Euclidean, Eclidean and Mahalanobis.  This clustering is performed using the $k$-means algorithm implemented in the MATLAB Statistics Toolbox, where the number of clusters and the centroid values is specified by the user. The algorithm employs an iterative partitioning procedure that optimizes the associated memberships by minimizing the sum of point-to-centroid distances across all $k$ clusters. As a result, each sea state is assigned to the cluster whose distance to centroid yields the minimum value, providing an optimally representative classification of the wave climate. In this paper results corresponding to~\enquote{Mahalanobis} method are presented. 
 
 
 \section{Some common mistakes}
@@ -482,7 +555,7 @@ As the IMEJ is an online-only journal, an author can publish colour figures on I
 % and a .pdf suffix will be assumed for pdflatex; or what has been declared
 % via \DeclareGraphicsExtensions.
 \caption{Flow rate as a function of pressure difference. Note that ``Fig.'' is abbreviated. There is a period after the figure number, followed by two spaces. It is good practice to explain the significance of the figure in the caption.}
-\label{fig_QP}
+% \label{fig_QP}
 \end{figure}
 
 % Note that the IEEE typically puts floats only at the top, even when this

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.9.17)  23 SEP 2026 12:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.9.17)  24 SEP 2026 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -216,6 +216,28 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 ) (C:\Program Files\MiKTeX\tex/latex/threeparttable\threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box57
+) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2026-05-19 v5.2p context-sensitive quotations (JAW)
+ (C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count306
+)
+\csq@reset=\count307
+\csq@gtype=\count308
+\csq@glevel=\count309
+\csq@qlevel=\count310
+\csq@maxlvl=\count311
+\csq@tshold=\count312
+\csq@ltx@everypar=\toks24
+ (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2026-05-19 v5.2p csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
+File: csquotes.cfg 
+)
+Package csquotes Info: Enabling multilingual quotes.
 ) (C:\Program Files\MiKTeX\tex/latex/subfig\subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
  (C:\Program Files\MiKTeX\tex/latex/caption\caption3.sty
@@ -232,17 +254,17 @@ Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IMEJtablestring \footnotesize \bgroup \par \centering \@IMEJtabletopskipstrut {\normalfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace {0.5\baselineskip }\egroup \@IMEJtablecaptionsepspace \else \@IMEJfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\normalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi  on input line 1175.
 )
-\c@KVtest=\count306
+\c@KVtest=\count313
 \sf@farskip=\skip55
 \sf@captopadj=\dimen258
 \sf@capskip=\skip56
 \sf@nearskip=\skip57
-\c@subfigure=\count307
-\c@subfigure@save=\count308
-\c@lofdepth=\count309
-\c@subtable=\count310
-\c@subtable@save=\count311
-\c@lotdepth=\count312
+\c@subfigure=\count314
+\c@subfigure@save=\count315
+\c@lofdepth=\count316
+\c@subtable=\count317
+\c@subtable@save=\count318
+\c@lotdepth=\count319
 \sf@top=\skip58
 \sf@bottom=\skip59
 ) (C:\Program Files\MiKTeX\tex/latex/url\url.sty
@@ -264,48 +286,106 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-) (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+) (C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2026/02/14 v26.3 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
+\babel@savecnt=\count320
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2078.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2080.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2082.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2083.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
+\U@D=\dimen259
+\l@unhyphenated=\language79
+ (C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count321
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4206.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (C:\Program Files\MiKTeX\tex/generic/babel/locale/en\babel-english.tex)
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 4330.
+ (C:\Program Files\MiKTeX\tex/latex/babel-english\english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 108.
+))
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+ (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count313
-) (IMEJ-Apr18.aux
-
-LaTeX Warning: Label `fig_QP' multiply defined.
-
-)
+\l__color_backend_stack_int=\count322
+) (IMEJ-Apr18.aux)
 \openout1 = `IMEJ-Apr18.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 244.
-LaTeX Font Info:    ... okay on input line 244.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
 
 -- Lines per column: 62 (exact).
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count314
-\scratchdimen=\dimen259
+\scratchcounter=\count323
+\scratchdimen=\dimen260
 \scratchbox=\box58
-\nofMPsegments=\count315
-\nofMParguments=\count316
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count317
-\MPscratchDim=\dimen260
-\MPnumerator=\count318
-\makeMPintoPDFobject=\count319
-\everyMPtoPDFconversion=\toks25
+\nofMPsegments=\count324
+\nofMParguments=\count325
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count326
+\MPscratchDim=\dimen261
+\MPnumerator=\count327
+\makeMPintoPDFobject=\count328
+\everyMPtoPDFconversion=\toks26
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+ (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)) (C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
@@ -322,29 +402,46 @@ Overfull \vbox (0.93286pt too high) has occurred while \output is active []
 <images/design.png, id=8, 70.8246pt x 145.0218pt>
 File: images/design.png Graphic file (type png)
 <use images/design.png>
-Package pdftex.def Info: images/design.png  used on input line 384.
+Package pdftex.def Info: images/design.png  used on input line 382.
 (pdftex.def)             Requested size: 113.31947pt x 232.03519pt.
- [2 <./images/design.png>]
-Underfull \hbox (badness 2111) in paragraph at lines 444--446
+<images/rectangle_comparison.png, id=10, 1727.253pt x 257.0403pt>
+File: images/rectangle_comparison.png Graphic file (type png)
+<use images/rectangle_comparison.png>
+Package pdftex.def Info: images/rectangle_comparison.png  used on input line 390.
+(pdftex.def)             Requested size: 506.45905pt x 75.36734pt.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 425.
+ (C:\Program Files\MiKTeX\tex/latex/psnfss\ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+) [2 <./images/design.png>]
+<images/18seas.png, id=21, 570.933pt x 259.6902pt>
+File: images/18seas.png Graphic file (type png)
+<use images/18seas.png>
+Package pdftex.def Info: images/18seas.png  used on input line 449.
+(pdftex.def)             Requested size: 232.97765pt x 86.09427pt.
+<images/locations.png, id=22, 1062.97125pt x 389.95688pt>
+File: images/locations.png Graphic file (type png)
+<use images/locations.png>
+Package pdftex.def Info: images/locations.png  used on input line 457.
+(pdftex.def)             Requested size: 233.8544pt x 85.79077pt.
+ [3 <./images/rectangle_comparison.png> <./images/18seas.png> <./images/locations.png>]
+Underfull \vbox (badness 2213) has occurred while \output is active []
+
+ [4]
+Underfull \hbox (badness 2111) in paragraph at lines 517--519
 \OT1/ppl/m/n/10 spaces are: grey-scale, RGB (red/green/blue) and
  []
 
-[3]
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 452.
- (C:\Program Files\MiKTeX\tex/latex/psnfss\ts1ppl.fd
-File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-)
-<FlowVsPressure.png, id=22, 310.15875pt x 219.4599pt>
+<FlowVsPressure.png, id=35, 310.15875pt x 219.4599pt>
 File: FlowVsPressure.png Graphic file (type png)
 <use FlowVsPressure.png>
-Package pdftex.def Info: FlowVsPressure.png  used on input line 480.
+Package pdftex.def Info: FlowVsPressure.png  used on input line 553.
 (pdftex.def)             Requested size: 244.6937pt x 173.137pt.
- [4 <./FlowVsPressure.png>]
-Underfull \hbox (badness 3138) in paragraph at lines 592--593
+[5]
+Underfull \hbox (badness 3138) in paragraph at lines 665--666
 []\OT1/ppl/m/n/10 Because repli-ca-tion is re-quired for sci-en-tific
  []
 
-[5] (IMEJ-Apr18.bbl
+[6 <./FlowVsPressure.png>] [7] (IMEJ-Apr18.bbl
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `en'. Using the pattern for
 ** the default language instead.
@@ -363,30 +460,24 @@ Underfull \hbox (badness 3138) in paragraph at lines 592--593
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `en'. Using the pattern for
 ** the default language instead.
-[6]) [7
-
-] (IMEJ-Apr18.aux)
+) [8] (IMEJ-Apr18.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 4746 strings out of 467867
- 79906 string characters out of 5428392
- 509737 words of memory out of 5000000
- 33587 multiletter control sequences out of 15000+600000
- 659365 words of font info for 112 fonts, out of 8000000 for 9000
+ 7385 strings out of 467867
+ 126467 string characters out of 5428392
+ 580570 words of memory out of 5000000
+ 36161 multiletter control sequences out of 15000+600000
+ 660354 words of font info for 114 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 57i,15n,78p,1634b,376s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on IMEJ-Apr18.pdf (7 pages, 348363 bytes).
+ 59i,15n,72p,1634b,392s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on IMEJ-Apr18.pdf (8 pages, 1777545 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
+ 120 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
