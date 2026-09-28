@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.9.17)  24 SEP 2026 17:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.9.25)  27 SEP 2026 18:10
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **c:/Users/Public/Documents/WorkingFolder/IMEJ/IMEJ-Apr18.tex
 (c:/Users/Public/Documents/WorkingFolder/IMEJ/IMEJ-Apr18.tex
@@ -194,41 +195,56 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
+) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/makecell\makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+ (C:\Program Files\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen181
+\ar@mcellbox=\box57
+\extrarowheight=\dimen182
+\NC@list=\toks24
+\extratabsurround=\skip55
+\backup@length=\skip56
+\ar@cellbox=\box58
+)
+\rotheadsize=\dimen183
+\c@nlinenum=\count302
+\TeXr@lab=\toks25
 ) (C:\Program Files\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen181
-\lightrulewidth=\dimen182
-\cmidrulewidth=\dimen183
-\belowrulesep=\dimen184
-\belowbottomsep=\dimen185
-\aboverulesep=\dimen186
-\abovetopsep=\dimen187
-\cmidrulesep=\dimen188
-\cmidrulekern=\dimen189
-\defaultaddspace=\dimen190
-\@cmidla=\count302
-\@cmidlb=\count303
-\@aboverulesep=\dimen191
-\@belowrulesep=\dimen192
-\@thisruleclass=\count304
-\@lastruleclass=\count305
-\@thisrulewidth=\dimen193
+\heavyrulewidth=\dimen184
+\lightrulewidth=\dimen185
+\cmidrulewidth=\dimen186
+\belowrulesep=\dimen187
+\belowbottomsep=\dimen188
+\aboverulesep=\dimen189
+\abovetopsep=\dimen190
+\cmidrulesep=\dimen191
+\cmidrulekern=\dimen192
+\defaultaddspace=\dimen193
+\@cmidla=\count303
+\@cmidlb=\count304
+\@aboverulesep=\dimen194
+\@belowrulesep=\dimen195
+\@thisruleclass=\count305
+\@lastruleclass=\count306
+\@thisrulewidth=\dimen196
 ) (C:\Program Files\MiKTeX\tex/latex/threeparttable\threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
-\@tempboxb=\box57
+\@tempboxb=\box59
 ) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2026-05-19 v5.2p context-sensitive quotations (JAW)
  (C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count306
+\etb@tempcnta=\count307
 )
-\csq@reset=\count307
-\csq@gtype=\count308
-\csq@glevel=\count309
-\csq@qlevel=\count310
-\csq@maxlvl=\count311
-\csq@tshold=\count312
-\csq@ltx@everypar=\toks24
+\csq@reset=\count308
+\csq@gtype=\count309
+\csq@glevel=\count310
+\csq@qlevel=\count311
+\csq@maxlvl=\count312
+\csq@tshold=\count313
+\csq@ltx@everypar=\toks26
  (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2026-05-19 v5.2p csquotes generic definitions (JAW)
 )
@@ -242,31 +258,39 @@ Package csquotes Info: Enabling multilingual quotes.
 Package: subfig 2005/06/28 ver: 1.3 subfig package
  (C:\Program Files\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen194
-\captionmargin=\dimen195
-\caption@leftmargin=\dimen196
-\caption@rightmargin=\dimen197
-\caption@width=\dimen198
-\caption@indent=\dimen199
-\caption@parindent=\dimen256
-\caption@hangindent=\dimen257
+\caption@tempdima=\dimen197
+\captionmargin=\dimen198
+\caption@leftmargin=\dimen199
+\caption@rightmargin=\dimen256
+\caption@width=\dimen257
+\caption@indent=\dimen258
+\caption@parindent=\dimen259
+\caption@hangindent=\dimen260
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
 Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \@IMEJtablestring \footnotesize \bgroup \par \centering \@IMEJtabletopskipstrut {\normalfont \footnotesize #1}\\{\normalfont \footnotesize \scshape #2}\par \addvspace {0.5\baselineskip }\egroup \@IMEJtablecaptionsepspace \else \@IMEJfigurecaptionsepspace \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace #2}\ifdim \wd \@tempboxa >\hsize \setbox \@tempboxa \hbox {\normalfont \footnotesize {#1.}\nobreakspace \nobreakspace }\parbox [t]{\hsize }{\normalfont \footnotesize \noindent \unhbox \@tempboxa #2}\else \hbox to\hsize {\normalfont \footnotesize \box \@tempboxa \hfil }\fi \fi  on input line 1175.
 )
-\c@KVtest=\count313
-\sf@farskip=\skip55
-\sf@captopadj=\dimen258
-\sf@capskip=\skip56
-\sf@nearskip=\skip57
-\c@subfigure=\count314
-\c@subfigure@save=\count315
-\c@lofdepth=\count316
-\c@subtable=\count317
-\c@subtable@save=\count318
-\c@lotdepth=\count319
-\sf@top=\skip58
-\sf@bottom=\skip59
+\c@KVtest=\count314
+\sf@farskip=\skip57
+\sf@captopadj=\dimen261
+\sf@capskip=\skip58
+\sf@nearskip=\skip59
+\c@subfigure=\count315
+\c@subfigure@save=\count316
+\c@lofdepth=\count317
+\c@subtable=\count318
+\c@subtable@save=\count319
+\c@lotdepth=\count320
+\sf@top=\skip60
+\sf@bottom=\skip61
+) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip62
+\enit@outerparindent=\dimen262
+\enit@toks=\toks27
+\enit@inbox=\box60
+\enit@count@id=\count321
+\enitdp@description=\count322
 ) (C:\Program Files\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -288,7 +312,7 @@ Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 ) (C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2026/02/14 v26.3 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
-\babel@savecnt=\count320
+\babel@savecnt=\count323
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2078.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2080.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2082.
@@ -296,11 +320,11 @@ LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
-\U@D=\dimen259
+\U@D=\dimen263
 \l@unhyphenated=\language79
  (C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count321
+\bbl@dirlevel=\count324
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
 (babel)             Reported on input line 4206.
@@ -326,8 +350,12 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count322
-) (IMEJ-Apr18.aux)
+\l__color_backend_stack_int=\count325
+) (IMEJ-Apr18.aux
+
+LaTeX Warning: Label `tab:design_parameters' multiply defined.
+
+)
 \openout1 = `IMEJ-Apr18.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 247.
@@ -348,17 +376,17 @@ LaTeX Font Info:    ... okay on input line 247.
 -- Lines per column: 62 (exact).
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
-\scratchdimen=\dimen260
-\scratchbox=\box58
-\nofMPsegments=\count324
-\nofMParguments=\count325
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count326
-\MPscratchDim=\dimen261
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count326
+\scratchdimen=\dimen264
+\scratchbox=\box61
+\nofMPsegments=\count327
+\nofMParguments=\count328
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count329
+\MPscratchDim=\dimen265
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
+\everyMPtoPDFconversion=\toks29
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
@@ -399,49 +427,101 @@ Overfull \vbox (0.93286pt too high) has occurred while \output is active []
 
 
 ]
-<images/design.png, id=8, 70.8246pt x 145.0218pt>
+<images/design.png, id=9, 70.8246pt x 145.0218pt>
 File: images/design.png Graphic file (type png)
 <use images/design.png>
-Package pdftex.def Info: images/design.png  used on input line 382.
+Package pdftex.def Info: images/design.png  used on input line 386.
 (pdftex.def)             Requested size: 113.31947pt x 232.03519pt.
-<images/rectangle_comparison.png, id=10, 1727.253pt x 257.0403pt>
+<images/rectangle_comparison.png, id=11, 1727.253pt x 257.0403pt>
 File: images/rectangle_comparison.png Graphic file (type png)
 <use images/rectangle_comparison.png>
-Package pdftex.def Info: images/rectangle_comparison.png  used on input line 390.
+Package pdftex.def Info: images/rectangle_comparison.png  used on input line 394.
 (pdftex.def)             Requested size: 506.45905pt x 75.36734pt.
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 425.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 424.
  (C:\Program Files\MiKTeX\tex/latex/psnfss\ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ) [2 <./images/design.png>]
-<images/18seas.png, id=21, 570.933pt x 259.6902pt>
+<images/knB.png, id=22, 357.846pt x 256.668pt>
+File: images/knB.png Graphic file (type png)
+<use images/knB.png>
+Package pdftex.def Info: images/knB.png  used on input line 464.
+(pdftex.def)             Requested size: 243.09818pt x 174.36351pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <./images/rectangle_comparison.png> <./images/knB.png>]
+<images/18seas.png, id=31, 570.933pt x 259.6902pt>
 File: images/18seas.png Graphic file (type png)
 <use images/18seas.png>
-Package pdftex.def Info: images/18seas.png  used on input line 449.
+Package pdftex.def Info: images/18seas.png  used on input line 477.
 (pdftex.def)             Requested size: 232.97765pt x 86.09427pt.
-<images/locations.png, id=22, 1062.97125pt x 389.95688pt>
+<images/locations.png, id=32, 1062.97125pt x 389.95688pt>
 File: images/locations.png Graphic file (type png)
 <use images/locations.png>
-Package pdftex.def Info: images/locations.png  used on input line 457.
+Package pdftex.def Info: images/locations.png  used on input line 485.
 (pdftex.def)             Requested size: 233.8544pt x 85.79077pt.
- [3 <./images/rectangle_comparison.png> <./images/18seas.png> <./images/locations.png>]
-Underfull \vbox (badness 2213) has occurred while \output is active []
+<images/regularUDF.png, id=33, 437.38406pt x 327.47343pt>
+File: images/regularUDF.png Graphic file (type png)
+<use images/regularUDF.png>
+Package pdftex.def Info: images/regularUDF.png  used on input line 573.
+(pdftex.def)             Requested size: 240.56197pt x 180.11095pt.
+<images/irregUDF.png, id=34, 456.20438pt x 229.60782pt>
+File: images/irregUDF.png Graphic file (type png)
+<use images/irregUDF.png>
+Package pdftex.def Info: images/irregUDF.png  used on input line 579.
+(pdftex.def)             Requested size: 246.34668pt x 123.98637pt.
 
- [4]
-Underfull \hbox (badness 2111) in paragraph at lines 517--519
-\OT1/ppl/m/n/10 spaces are: grey-scale, RGB (red/green/blue) and
+Overfull \hbox (1.65298pt too wide) in paragraph at lines 579--580
+ [][] 
  []
 
-<FlowVsPressure.png, id=35, 310.15875pt x 219.4599pt>
-File: FlowVsPressure.png Graphic file (type png)
-<use FlowVsPressure.png>
-Package pdftex.def Info: FlowVsPressure.png  used on input line 553.
-(pdftex.def)             Requested size: 244.6937pt x 173.137pt.
-[5]
-Underfull \hbox (badness 3138) in paragraph at lines 665--666
-[]\OT1/ppl/m/n/10 Because repli-ca-tion is re-quired for sci-en-tific
+<images/MRHs.png, id=35, 717.882pt x 552.3837pt>
+File: images/MRHs.png Graphic file (type png)
+<use images/MRHs.png>
+Package pdftex.def Info: images/MRHs.png  used on input line 591.
+(pdftex.def)             Requested size: 244.6937pt x 188.27997pt.
+<images/MRTp.png, id=36, 712.1004pt x 551.9019pt>
+File: images/MRTp.png Graphic file (type png)
+<use images/MRTp.png>
+Package pdftex.def Info: images/MRTp.png  used on input line 595.
+(pdftex.def)             Requested size: 244.6937pt x 189.64001pt.
+[4 <./images/18seas.png> <./images/locations.png>]
+Underfull \hbox (badness 2073) in paragraph at lines 601--602
+\OT1/ppl/m/n/10 er-age power ab-sorbed by the wave en-ergy con-
  []
 
-[6 <./FlowVsPressure.png>] [7] (IMEJ-Apr18.bbl
+<images/powerDepth.png, id=42, 1078.2684pt x 862.422pt>
+File: images/powerDepth.png Graphic file (type png)
+<use images/powerDepth.png>
+Package pdftex.def Info: images/powerDepth.png  used on input line 605.
+(pdftex.def)             Requested size: 244.6937pt x 195.70782pt.
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 611.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 611.
+
+
+LaTeX Warning: Command \textendash invalid in math mode on input line 611.
+
+[5 <./images/regularUDF.png> <./images/irregUDF.png>]
+<images/Figure_2_Gap_Percentage_Difference.png, id=49, 499.74706pt x 391.34206pt>
+File: images/Figure_2_Gap_Percentage_Difference.png Graphic file (type png)
+<use images/Figure_2_Gap_Percentage_Difference.png>
+Package pdftex.def Info: images/Figure_2_Gap_Percentage_Difference.png  used on input line 616.
+(pdftex.def)             Requested size: 244.6937pt x 191.61597pt.
+ [6 <./images/MRHs.png> <./images/MRTp.png> <./images/powerDepth.png> <./images/Figure_2_Gap_Percentage_Difference.png>]
+<images/optiCoffabsD3.png, id=57, 1119.43219pt x 704.6325pt>
+File: images/optiCoffabsD3.png Graphic file (type png)
+<use images/optiCoffabsD3.png>
+Package pdftex.def Info: images/optiCoffabsD3.png  used on input line 690.
+(pdftex.def)             Requested size: 244.6937pt x 154.01971pt.
+<images/optimalContourD3.png, id=58, 469.755pt x 225.7233pt>
+File: images/optimalContourD3.png Graphic file (type png)
+<use images/optimalContourD3.png>
+Package pdftex.def Info: images/optimalContourD3.png  used on input line 697.
+(pdftex.def)             Requested size: 244.6937pt x 117.57654pt.
+ [7 <./images/optiCoffabsD3.png> <./images/optimalContourD3.png>] (IMEJ-Apr18.bbl
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `en'. Using the pattern for
 ** the default language instead.
@@ -465,19 +545,23 @@ Underfull \hbox (badness 3138) in paragraph at lines 665--666
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 7385 strings out of 467867
- 126467 string characters out of 5428392
- 580570 words of memory out of 5000000
- 36161 multiletter control sequences out of 15000+600000
- 660354 words of font info for 114 fonts, out of 8000000 for 9000
+ 8028 strings out of 467867
+ 137331 string characters out of 5428392
+ 598001 words of memory out of 5000000
+ 36788 multiletter control sequences out of 15000+600000
+ 661902 words of font info for 119 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 59i,15n,72p,1634b,392s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on IMEJ-Apr18.pdf (8 pages, 1777545 bytes).
+ 59i,19n,72p,1634b,385s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on IMEJ-Apr18.pdf (8 pages, 6330858 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
+ 132 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

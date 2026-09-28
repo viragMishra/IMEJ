@@ -121,22 +121,4 @@ D.~Bull and A.~Dallman, ``{Wave Energy Prize Experimental Sea State
   0.5em minus 0.4em\relax American Society of Mechanical Engineers, June 2017,
   paper V010T09A025.
 
-\bibitem{taylor1919}
-G.~I. Taylor, ``{Tidal Oscillations in gulfs and rectangular basins},''
-  \emph{Proceedings of the {L}ondon Mathematical Society}, vol.~20, pp.
-  148--181, 1919.
-
-\bibitem{higgsBoson2015}
-\BIBentryALTinterwordspacing
-G.~Aad \emph{et~al.}, ``{Combined Measurement of the Higgs Boson Mass in $pp$
-  Collisions at $\sqrt{s}=7$ and 8 TeV with the ATLAS and CMS Experiments},''
-  \emph{Phys. Rev. Lett.}, vol. 114, no.~19, p. 191803, May 2015. [Online].
-  Available: \url{https://link.aps.org/doi/10.1103/PhysRevLett.114.191803}
-\BIBentrySTDinterwordspacing
-
-\bibitem{castro1971}
-I.~P. Castro, ``{Wake characteristics of two-dimensional perforated plates
-  normal to an air-stream},'' \emph{Journal of Fluid Mechanics}, vol.~46,
-  no.~3, pp. 599----609, 1971.
-
 \end{thebibliography}

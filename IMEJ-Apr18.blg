@@ -34,51 +34,50 @@ Reallocating 'name_sep_char' (item size: 1) to 100000 items.
 Reallocating 'name_tok' (item size: 4) to 100000 items.
 Reallocating 'out_buf' (item size: 1) to 100000 items.
 Reallocating 'sv_buffer' (item size: 1) to 100000 items.
-Reallocating 'str_pool' (item size: 1) to 130000 items.
 -- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 ** IEEEtran BST control entry "IEEEexample:BSTcontrol" detected.
 
 Done.
-You've used 18 entries,
+You've used 15 entries,
             4087 wiz_defined-function locations,
-            942 strings with 92880 characters,
-and the built_in function-call counts, 12731 in all, are:
-= -- 1073
-> -- 310
-< -- 90
-+ -- 161
-- -- 61
-* -- 658
-:= -- 2032
-add.period$ -- 35
-call.type$ -- 18
-change.case$ -- 19
-chr.to.int$ -- 189
-cite$ -- 18
-duplicate$ -- 946
-empty$ -- 940
-format.name$ -- 70
-if$ -- 2899
+            917 strings with 10547 characters,
+and the built_in function-call counts, 10301 in all, are:
+= -- 845
+> -- 276
+< -- 64
++ -- 141
+- -- 57
+* -- 544
+:= -- 1646
+add.period$ -- 29
+call.type$ -- 15
+change.case$ -- 16
+chr.to.int$ -- 135
+cite$ -- 15
+duplicate$ -- 769
+empty$ -- 771
+format.name$ -- 65
+if$ -- 2334
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 168
-newline$ -- 92
-num.names$ -- 17
-pop$ -- 320
+int.to.str$ -- 14
+missing$ -- 144
+newline$ -- 81
+num.names$ -- 14
+pop$ -- 285
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 4
-skip$ -- 1012
+skip$ -- 812
 stack$ -- 0
-substring$ -- 463
-swap$ -- 772
-text.length$ -- 31
+substring$ -- 326
+swap$ -- 613
+text.length$ -- 23
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 18
+type$ -- 15
 warning$ -- 0
-while$ -- 58
-width$ -- 19
-write$ -- 214
+while$ -- 46
+width$ -- 16
+write$ -- 179

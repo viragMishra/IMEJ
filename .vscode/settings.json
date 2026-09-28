@@ -4,6 +4,7 @@
             "name": "pdflatex",
             "command": "pdflatex",
             "args": [
+                "-file-line-error",
                 "-interaction=nonstopmode",
                 "-synctex=1",
                 "%DOC%"

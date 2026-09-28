@@ -111,7 +111,7 @@
 % *** SPECIALIZED LIST PACKAGES ***
 %
 %\usepackage{algorithm2e}
-
+\usepackage{makecell}
 
 % *** ALIGNMENT PACKAGES ***
 %
@@ -181,7 +181,7 @@
 % The latest version can be found at:
 % http://www.ctan.org/pkg/dblfloatfix
 
-
+\usepackage{enumitem}
 
 
 %\ifCLASSOPTIONcaptionsoff
@@ -257,6 +257,8 @@
 %
 \newcommand{\figref}[1]{Fig.~\ref{#1}}
 \newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+
 %
 \newcommand{\IMEJconferenceheader}{%
   \shortstack[l]{%
@@ -339,7 +341,8 @@ PROCEEDINGS OF THE INTERNATIONAL CONFERENCE ON OCEAN ENERGY \& OCEAN ENERGY EURO
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-Recent developments in self-reacting oscillating Wave Energy Convertors (WECs) point toward two popular design concepts. These designs are either semi-submerged system in which a surface piercing float reacts against a relatively still heave plate or a single body system that reacts against the ocean floor.  The first design employs a rigid spar connection between the actuator and the reaction body; however, the second design uses a flexible belt connection between the actuator and the foundation. In this work, a two-body sub-surface WEC is proposed in which the submerged float reacts against a base that is dynamically active. The dynamics of the reacting body is influenced by both the buoyancy parameters and the PTO generated tether tension. As a result, the two-body system oscillates in an antipodal mode. The optimal hydrostatic conditions that result in a design that can generate mechanical power, in single degree of freedom motion, under the wave excitation are discussed in this work. The hydrodynamic analysis is carried out for different wave conditions observed off the coast of US. Optimal PTO parameters are determined for various designs. The analysis is carried out using Ansys-Aqwa. Observations of the relative predictive performance between the two numerical simulations models are delineated.
+Recent developments in self-reacting oscillating Wave Energy Convertors (WECs) point toward two popular design concepts. These designs are either semi-submerged system in which a surface piercing float reacts against a relatively still heave plate or a single body system that reacts against the ocean floor.  The first design employs a rigid spar connection between the actuator and the reaction body; however, the second design uses a flexible belt connection between the actuator and the foundation. In this work, a two-body sub-surface WEC is proposed in which the submerged float reacts against a base that is dynamically active. The dynamics of the reacting body is influenced by both the buoyancy parameters and the PTO generated tether tension. As a result, the two-body system oscillates in an antipodal mode. The optimal hydrostatic conditions that result in a design that can generate mechanical power, in single degree of freedom motion, under the wave excitation are discussed in this work. The hydrodynamic analysis is carried out for different wave conditions observed off the coast of US. Optimal PTO parameters are determined for various designs. The analysis is carried out using Ansys-Aqwa. Observations of the relative predictive performance between the two numerical simulations models are delineated.\\
+\color{red}{Currently 204 words limit is 250}
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -364,18 +367,19 @@ Hydrodynamics, Power Take Off (PTO), Wave Energy Converter (WEC)
 % by the rest of the first word in caps.
 % Here we have a "T" for an initial drop letter
 % and "HIS" in caps to complete the first word.
-\IMEJPARstart{D}{ue} to the concerted effort to achieve energy independence as well as to reduce the greenhouse gas emission, most of the development to date in offshore renewable energy systems has been targeted at “utility-scale” or “community-scale” devices. These devices have electricity generation capacities in the order of MW and kW respectively. However, another application area that is attracting investment in wave energy converters is “small-scale” devices. These devices can provide autonomous power to various ocean-bound systems, such as autonomous underwater vehicles~\cite{chen2024unified}, observation systems~\cite{doe2018wind}, and even aquaculture farms. The expectation is that these devices can be used to power the on-site stand-alone systems which are located remotely, resulting in exponential growth in the sector often referred as “Blue economy”\cite{green2019enabling,cavagnaro2020powering}.
-This paper provides an overview of the initial design process of such a device. First, the primary dimension of the device is derived based on the constraints of the operating design (Sect. yyy). The details of the deployment sites are discussed in (Sect. xxxxxx). The results and the following discussion are presented in (Sect. zzzz). This project is funded by the NAVSEA, as a one-year grant to design a sub-surface WEC capable of continuous power generation of 100W at various sites with distinct wave characteristics off the coast of the United States.
+\IMEJPARstart{D}{ue} to the concerted effort to achieve energy independence as well as to reduce the greenhouse gas emission, most of the development to date in offshore renewable energy systems has been targeted at “utility-scale” or “community-scale” devices. These devices have electricity generation capacities in the order of $\mathrm{MW}$ and $\mathrm{kW}$ respectively. However, another application area that is attracting investment in wave energy converters is “small-scale” devices. These devices can provide autonomous power to various ocean-bound systems, such as autonomous underwater vehicles~\cite{chen2024unified}, observation systems~\cite{doe2018wind}, and even aquaculture farms. The expectation is that these devices can be used to power the on-site stand-alone systems which are located remotely, resulting in exponential growth in the sector often referred as “Blue economy”\cite{green2019enabling,cavagnaro2020powering}.
+This paper provides an overview of the initial design process of such a device. First, the operating principle and primary dimension of the device is derived and discussed in~\secref{sec:device_details}~based on the constraints of the operating conditions. The numerical modelling approach is described in~\secref{sec:numerical_modelling}. The details of the deployment sites are discussed in~\secref{sec:deployment_sites}. The results and the following discussion are presented in~\secref{sec:results_discussion}.
 
 \section{Background}
 Numerical benchmarking of eight WECs with different working principles was conducted to evaluate their power matrices and site specific annual energy production~\cite{babarit2012}. Out of these, two operated close to sea-bed and only one was near surface submerged WECs. This shows that the focus has mainly been around floating devices. Some of the popular floating WECs with heave plate are MBARI-WEC~\cite{hamiltonMBARIWECPowerSource2021}, OPT Powerbuoy, OSU-Lupa (Laboratory Upgrade Point Absorber)~\cite{beringer_numerical_2026} and Wavebob~\cite{beatty_wave_2019}. 
 
 
 Though the wave energy decays exponentially with depth in deep water regime, subsurface WECs provide the potential benefit of survivability and covertness. Possibly these are reasons why subsurface WECs are emerging as a preferred design choice for WEC developers. Some of the popular designs that are either bottom fixed or do not have a heave plate as reacting bodies are AWS Ocean Energy’s Archimedes Waveswing, Symphony Wave Power’s WEC, Carnegie Clean Energy’s CETO 6~\cite{sergiienkoOptimalArrangementMooring2016}, and CalWave’s xWave. CETO6 and xWave are multi tethered, multi DOF point absorbers which operate close to the surface. The Waveswing is an air pressure differential point absorber tethered to the sea bed and Symphony Wave Power’s WEC is a bottom-fixed device operating in shallow waters.
-Conceptual submerged WEC capable of producing 10~W of power with a float and six trubines has been proposed in~\cite{jmse12010137}.
+Conceptual submerged WEC capable of producing $10~\mathrm{W}$ of power with a float and six trubines has been proposed in~\cite{jmse12010137}.
 \par In all the buoyant designs mentioned above the buoyancy of the float acts as the actuation force and either the foundation in the sea bed or the heave plate acts as a reaction body. In this work we propose a two-body submerged system with a float and heave plate connected by a tether and the entire system is moored to the foundation. The float will act as an actuator and the buoyancy of the heave plate will aid to power generation. This work will evaluate the performance for the above described WEC and compare six different design candidates at different wave energy sites in the US. 
 
 \section{Device Details}
+\label{sec:device_details}
 The WEC design under study is a two-body point absorber consisting of a submerged float and a heave plate. The design of the WEC supports the sub-surface operation.~The sketch of primary components used in the numerical modelling are shown in~\figref{fig_QP}. The float and heave plate are connected by a tether which is attached to the top of the heave plate and the bottom of the float. The heave plate is moored to the sea bed using a mooring line. The mooring line is attached to the bottom of the heave plate and the other end is attached to a foundation on the sea bed. The tether and mooring line are assumed to be linear elastic with a stiffness of $k$ and $0.1k$ respectively. The tether and mooring line are assumed to be massless and inextensible.
 \begin{figure}[!t]
 \centering
@@ -384,7 +388,7 @@ The WEC design under study is a two-body point absorber consisting of a submerge
 \label{fig_QP}
 \end{figure}
 \par
-To determine optimal device configuration multiple designs were analyzed. In this paper preliminary results for some of the designs considered are discussed and compared. The relative dimensions of the float and Heave Plate for various designs considered are shown in~\figref{fig_rectangle_comparison}. A summary of the important dimensions and characteristics of these designs are presented in~\tabref{tab:design_parameters}. $R_f$ and $R_{hp}$ are the radius of float and heave plate respectively and $H_f$, $H_{hp}$ are the height of float and heave plate. Similarly, $W_f$ and $W_{hp}$ are the weight of the float and heave plate. The primary difference between various designs is that the total weight of the design D0 was $8000$ kg, however the new designs are comparatively lighter in the range $2100$ kg (D1, D2), $2500$ kg (D3, D4) and (D5, D6) which is $2966$ kg. The tether tension in the design D0 was $23696$ N, which would increase the CAPEX cost as the cost is proportional to the tether cost. However, the tether tension in other designs is significantly lower. 
+To determine optimal device configuration multiple designs were analyzed. In this paper preliminary results for some of the designs considered are discussed and compared. The relative dimensions of the float and Heave Plate for various designs considered are shown in~\figref{fig_rectangle_comparison}. A summary of the important dimensions and characteristics of these designs are presented in~\tabref{tab:design_parameters}. $R_f$ and $R_{hp}$ are the radius of float and heave plate respectively and $H_f$, $H_{hp}$ are the height of float and heave plate. Similarly, $W_f$ and $W_{hp}$ are the weight of the float and heave plate. The primary difference between various designs is that the total weight of the design D0 was $8000~\mathrm{kg}$, however the new designs are comparatively lighter in the range $2100~\mathrm{kg}$ (D1, D2), $2500~\mathrm{kg}$ (D3, D4) and (D5, D6) which is $2966~\mathrm{kg}$. The tether tension in the design D0 was $23696~\mathrm{N}$, which would increase the CAPEX cost as the cost is proportional to the tether cost. However, the tether tension in other designs is significantly lower.
 \begin{figure*}[!t]
 \centering
 \includegraphics[width=\textwidth]{images/rectangle_comparison.png}
@@ -399,29 +403,24 @@ To determine optimal device configuration multiple designs were analyzed. In thi
 \renewcommand{\arraystretch}{1.3}
 \resizebox{\textwidth}{!}{%
 \begin{tabular}{cccccccccc}
-\hline
-\textbf{Design} & \textbf{$W_f$} & \textbf{$W_{hp}$} & \textbf{$W_f+W_{hp}$} & \textbf{$R_f$} & \textbf{$R_{hp}$} & \textbf{$H_f$} & \textbf{$H_{hp}$} & \textbf{Tether} & \textbf{Mooring} \\
-& \textbf{(kg)} & \textbf{(kg)} & \textbf{(kg)} & \textbf{(m)} & \textbf{(m)} & \textbf{(m)} & \textbf{(m)} & \textbf{tension (N)} & \textbf{tension (N)} \\
-\hline
+\toprule
+Design & \(W_f\) & \(W_{hp}\) & \(W_f+W_{hp}\) & \(R_f\) & \(R_{hp}\) & \(H_f\) & \(H_{hp}\) & Tether & Mooring \\
+& (\( \mathrm{kg} \)) & (\( \mathrm{kg} \)) & (\( \mathrm{kg} \)) & (\( \mathrm{m} \)) & (\( \mathrm{m} \)) & (\( \mathrm{m} \)) & (\( \mathrm{m} \)) & (\( \mathrm{N} \)) & (\( \mathrm{N} \)) \\
+\midrule
 D0 & 4000 & 4000 & 8000 & 1 & 1 & 2 & 0.5 & 23931 & 201 \\
-
 D1 & 700 & 1400 & 2100 & 0.777 & 1.5 & 0.482 & 0.184 & 2325 & 1601 \\
-
 D2 & 800 & 1600 & 2400 & 0.82 & 1.48 & 0.468 & 0.2 & 2092 & 172 \\
-
 D3 & 1500 & 1000 & 2500 & 1.5 & 1.35 & 0.3 & 0.06 & 6606 & 203 \\
-
 D4 & 1500 & 1000 & 2500 & 2.65 & 1.2 & 0.1 & 0.06 & 7466 & 358 \\
-
 D5 & 2066 & 900 & 2966 & 1.48 (max) & 1.35 & 1.027 (total) & 0.06 & 5782 & 289 \\
-
 D6 & 2066 & 900 & 2966 & 1.75 (max) & 1.35 & 0.853 (total) & 0.06 & 5782 & 277 \\
-\hline
+\bottomrule
 \end{tabular}%
 }
 \end{table*}
 
 \section{Numerical Modelling}
+\label{sec:numerical_modelling}
 Commercially available software~\enquote{Ansys-Aqwa\textregistered{}} was used to both calculate the frequency dependent parameters and to simulate the time-dependent dynamic behavior of the WEC.
 \subsection{Cable modelling}
 A linear elastic cable module in Aqwa is the simplest numerical model of an actual mooring line. Aqwa requires the user to specify the unstretched length instead of pretension for elastic tethers. With the knowledge of stiffness and pretension (calculated as the difference between the buoyancy and the weight of the float and Heave Plate), the stretched length can be determined.
@@ -431,34 +430,62 @@ L_0^{t} &= D_{hp}-(H_f+D_f)-L^{t} \label{eq:tether_unstretched} \\
 L^{m} &= \frac{(V_f+V_{hp})-(V_f^{disp}+V_{hp}^{disp})\rho_w g}{0.1k} \label{eq:mooring_stretched} \\
 L_0^{m} &= D-(D_{hp}+H_{hp})-L^{m} \label{eq:mooring_unstretched}
 \end{align}
-The stretched length $L^{t}$ of the tether and mooring can be calculated using~\eqref{eq:tether_stretched} and~\eqref{eq:mooring_stretched}. The initial unstretched length $L_0$ of the tether and mooring can be calculated using~\eqref{eq:tether_unstretched} and~\eqref{eq:mooring_unstretched} respectively. $V_x^{disp}$ is the displaced volume of the respective cylindrical geometry ($x$ can be either~\enquote{$f$} for float or~\enquote{$hp$} for heave plate.), $\rho_w$ is the density of water, $g$ is the acceleration due to gravity, $k$ is the stiffness of the tether, $D_{x}$ is the distance from the free surface to the respective cylindrical geometry, $H_x$ is the height of the respective cylindrical geometry.~$D$ is the depth of water at deployment location~(considered $=70$~m for all the simulations). 
+The stretched length $L^{t}$ of the tether and mooring can be calculated using~\eqref{eq:tether_stretched} and~\eqref{eq:mooring_stretched}. The initial unstretched length $L_0$ of the tether and mooring can be calculated using~\eqref{eq:tether_unstretched} and~\eqref{eq:mooring_unstretched} respectively. $V_x^{disp}$ is the displaced volume of the respective cylindrical geometry ($x$ can be either~\enquote{$f$} for float or~\enquote{$hp$} for heave plate.), $\rho_w$ is the density of water, $g$ is the acceleration due to gravity, $k$ is the stiffness of the tether, $D_{x}$ is the distance from the free surface to the respective cylindrical geometry, $H_x$ is the height of the respective cylindrical geometry.~$D$ is the depth of water at deployment location~(considered $=70~\mathrm{m}$ for all the simulations).
 
 \subsection{PTO algorithm}
-The PTO system is modelled as a linear spring-damper system with a stiffness $K_{mech}$ and p $C_{mech}$. The mechanical spring force is given by:
+The PTO system is modelled as a linear spring-damper system. The total force acting on the PTO system is the sum of the mechanical spring force and the generator force.
+This force is given by~\ref{eq:mech_force}
 \begin{equation}
-F_{mech} = C + K_{mech} \Delta L
+F_{PTO} =
+\begin{cases}
+C + K_{mech}\Delta L^t + B \dot{\Delta L^t}, & \text{if } L^t > L_0^t \\
+0, & \text{if } L^t \leq L_0^t
+\end{cases}
 \label{eq:mech_force}
 \end{equation}
+where $C$ is the constant pretension, $K_{mech}$ is the spring stiffness, \(\Delta L^t =(L^t - L_0^t)\) is the tether extension and $B$ is the damping coefficient.
+
+In this project three PTO models have been developed. These models are
+% \begin{enumerate}
+% \item Aqwa (Elastic Cable-Fender) model
+% \item UDF (Spring-Damper) model
+% \item UDF with limiting (Spring-Damper) model
+% \end{enumerate}
+% The first model is the default Aqwa model which uses a linear elastic cable to model the PTO. The second model is a User Defined Function (UDF) that models the PTO as a linear spring-damper system. The third model is a UDF that models the PTO as a linear spring-damper system with a limiting force. The details of the UDF models are discussed in the following sections.
+\subsubsection{Aqwa (Elastic Cable-Fender)}
+In this model, the PTO is modelled as a combination of a linear elastic cable and a fender.
+The spring stiffness is modeled using the cable element. A fender in Aqwa can have nonlinear stiffness, friction and damping. However, for this modelling only the damping properties of the fender were considered. Just like the cable element, the fender acts only in extension between a point on float and the heave plate.
+\subsubsection{UDF (Spring-Damper)}
+A User Defined Function (UDF) is an external program that can be called from Aqwa and coupled with the solver to enhance the existing functionality. In this work the UDF is utilized to replace the numerical PTO modeling component of Aqwa discussed above. This architecture allows us to implement arbitrary force models like providing limits and providing component characteristics that cannot be defined in standard Aqwa input files.
+\par
+For each design and every sea state, \(58\) combinations of stiffness and damping coefficients were used in the simulations.~\figref{fig_knB} shows the various combinations of PTO parameters considered in this analysis.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.48\textwidth]{images/knB.png}
+\caption{Various combinations of PTO parameters considered in the analysis.}
+\label{fig_knB}
+\end{figure}
 
 \section{Wave Climate at deployment locations}
-Based on the works of~\cite{alday2024effects} on wave resource assessment off the coast of US North West, a set of guidelines were developed and included in a technical specification for wave resource assessment by International Electrotechnical Commission (IEC)~\cite{iec62600_101_2024}. The IEC brings together international marine energy experts to develop consensus-based standards that guide the development of a broad range of sectors. The current industry consensus is determination of representative sea states based on the energy weighted joint probability distribution function of primarily $H_{s}$ and $T_{e}/T_{P}$~\cite{robertson2021holistic}. 
-However, the true description of a sea state should involve additional parameters such as spectral shape, peak direction, directional spreading, wind, tide, and current; yet data to fully characterize these aspects are often unavailable. Even when such data exist, current approaches neither develop a multidimensional probabilistic description of the deployment site nor account for energy-weighted probabilities, and they typically preclude the evaluation of WEC performance across multiple deployment climates. A need for developing a methodology that could account for multiple deployment locations was presented in a Wave Energy Prize competition by US Department of Energy in 2016. A new methodology was proposed in this competition by~\cite{bull2017wave} that applied a cluster analysis to scatter diagrams in order to determine a subset of sea states that could be scaled to find the average annual power flux at each wave climate. A common centroid representing of $H_{s}$ and $T_{P}$ was determined for the clusters. This procedure opens the possibility of using a single set of cluster centroid for different locations. Since WEC performance assessment simulations are computationally resource intensive, in this work the methodology described above is used to run simulations for a single set of cluster centroids and the power produced for each centroid is scaled depending on the site under consideration.
+\label{sec:deployment_sites}
+Based on the works of~\cite{alday2024effects} on wave resource assessment off the coast of US North West, a set of guidelines were developed and included in a technical specification for wave resource assessment by International Electrotechnical Commission (IEC)~\cite{iec62600_101_2024}. The IEC brings together international marine energy experts to develop consensus-based standards that guide the development of a broad range of sectors. The current industry consensus is determination of representative sea states based on the energy weighted joint probability distribution function of primarily \(H_{s}\) and \(T_{e}/T_{P}\)~\cite{robertson2021holistic}.
+However, the true description of a sea state should involve additional parameters such as spectral shape, peak direction, directional spreading, wind, tide, and current; yet data to fully characterize these aspects are often unavailable. Even when such data exist, current approaches neither develop a multidimensional probabilistic description of the deployment site nor account for energy-weighted probabilities, and they typically preclude the evaluation of WEC performance across multiple deployment climates. A need for developing a methodology that could account for multiple deployment locations was presented in a Wave Energy Prize competition by US Department of Energy in 2016. A new methodology was proposed in this competition by~\cite{bull2017wave} that applied a cluster analysis to scatter diagrams in order to determine a subset of sea states that could be scaled to find the average annual power flux at each wave climate. A common centroid representing of \(H_{s}\) and \(T_{P}\) was determined for the clusters. This procedure opens the possibility of using a single set of cluster centroid for different locations. Since WEC performance assessment simulations are computationally resource intensive, in this work the methodology described above is used to run simulations for a single set of cluster centroids and the power produced for each centroid is scaled depending on the site under consideration.
 \par
-\begin{figure}[h]
+A set of 18 sea states, shown in~\figref{fig_18seas}, was used throughout the analysis in this report. Wave elevations were generated using the Bretschneider spectrum. Although these wave datasets do not all correspond to the same water depth (ranges from \(42~\mathrm{m}\) to \(149~\mathrm{m}\)), they provide a useful indication of WEC performance across varied wave profiles, since the same set of sea states is applied at each location shown in~\figref{fig_location}. Note that when the weights associated with the $18$ sea states are used, they account for varying percentages of the total joint probability distribution (\(67\%-95\%\)), depending on location. This is because, at some locations, a significant portion of the year falls into sea states not represented within the \(18\) sea states considered.
+\begin{figure}[htbp]
 \centering
 \includegraphics[height=0.17\textwidth, width=0.46\textwidth]{images/18seas.png}
 \caption{The sea states used for the analysis of WEC performance}
 \label{fig_18seas}
 \end{figure}
-A set of 18 sea states, shown in~\figref{fig_18seas}, was used throughout the analysis in this report. Wave elevations were generated using the Bretschneider spectrum. Although these wave datasets do not all correspond to the same water depth (ranges from $42$~m to $149$~m), they provide a useful indication of WEC performance across varied wave profiles, since the same set of sea states is applied at each location shown in~\figref{fig_location}. Note that when the weights associated with the $18$ sea states are used, they account for varying percentages of the total joint probability distribution ($67\%$--$95\%$), depending on location. This is because, at some locations, a significant portion of the year falls into sea states not represented within the $18$ sea states considered. 
 \par
-\begin{figure}[h]
+Site specific optimal PTO coefficient for the WEC are determined for each location shown in~\figref{fig_location}. These sites either host a testing facility or a deployment berth and are probable sites for the development of WEC farms.  The significant wave height reported by NDBC (and used here) is the average of the highest one-third of all the wave heights during a \(20\)-minute sampling period. The peak period is the period with maximum energy in the spectrum. The list of the buoy locations chosen for the analysis is presented in~\tabref{tab:nbdc_buoys}.
+\begin{figure}[htbp]
 \centering
 \includegraphics[scale=0.22]{images/locations.png}
 \caption{Location of the NDBC buoys used for the analysis of wave climate}
 \label{fig_location}
 \end{figure}
-Site specific optimal PTO coefficient for the WEC are determined for each location shown in~\figref{fig_location}. These sites either host a testing facility or a deployment berth and are probable sites for the development of WEC farms.  The significant wave height reported by NDBC (and used here) is the average of the highest one-third of all the wave heights during a 20-minute sampling period. The peak period is the period with maximum energy in the spectrum. The list of the buoy locations chosen for the analysis is presented in~\tabref{tab:nbdc_buoys}.
 \par
 \begin{table}[!t]
 \centering
@@ -484,187 +511,213 @@ Site specific optimal PTO coefficient for the WEC are determined for each locati
 \end{threeparttable}
 \end{table}
 
-Occurrence data reported by NDBC buoys were used to calculate the annual average power at that location. A cluster analysis was applied to wave scatter diagrams to identify a representative subset of sea states that can be scaled to estimate the average annual power (AAP) flux. The subset is determined by minimizing the distance between each data point and its corresponding cluster centroid. Four pdist2 options for minimizing the distance function were compared these are Squared Euclidean, Standardized Euclidean, Eclidean and Mahalanobis.  This clustering is performed using the $k$-means algorithm implemented in the MATLAB Statistics Toolbox, where the number of clusters and the centroid values is specified by the user. The algorithm employs an iterative partitioning procedure that optimizes the associated memberships by minimizing the sum of point-to-centroid distances across all $k$ clusters. As a result, each sea state is assigned to the cluster whose distance to centroid yields the minimum value, providing an optimally representative classification of the wave climate. In this paper results corresponding to~\enquote{Mahalanobis} method are presented. 
+Occurrence data reported by NDBC buoys were used to calculate the annual average power at that location. A cluster analysis was applied to wave scatter diagrams to identify a representative subset of sea states that can be scaled to estimate the average annual power (AAP) flux. The subset is determined by minimizing the distance between each data point and its corresponding cluster centroid. Four pdist2 options for minimizing the distance function were compared these are Squared Euclidean, Standardized Euclidean, Eclidean and Mahalanobis.  This clustering is performed using the \(k\)-means algorithm implemented in the MATLAB Statistics Toolbox, where the number of clusters and the centroid values is specified by the user. The algorithm employs an iterative partitioning procedure that optimizes the associated memberships by minimizing the sum of point-to-centroid distances across all $k$ clusters. As a result, each sea state is assigned to the cluster whose distance to centroid yields the minimum value, providing an optimally representative classification of the wave climate. In this paper results corresponding to~\enquote{Mahalanobis} method are presented.
+\section{Sensitivity analysis}
+\label{sec:sensitivity_analysis}
+The sensitivity study summarized in~\tabref{tab:design_parameters} investigates the influence of mass ratio \(\mathrm{MR}\), float draft \(\mathrm{FD}\), and the distance between float–heave plate (Gap) on the hydrodynamic performance of the device. The parameters that were varied are shown in bold. The baseline configuration, D0, has a mass ratio of \(1.0\), float draft of \(5~\mathrm{m}\), HP draft of \(30~\mathrm{m}\) and a float–HP gap of \(23~\mathrm{m}\). To assess the effect of mass ratio, the float geometry and submergence were held constant while the mass ratio varied from \(0.5\) to \(1.25\). The influence of float draft was then examined by varying the draft from \(2~\mathrm{m}\) to \(7~\mathrm{m}\), with the HP draft adjusted accordingly to maintain a constant \(23~\mathrm{m}\) float–HP gap. An additional design, D3, with a mass ratio of \(1.5\), was used to further investigate the effects of reduced float draft and varying float–HP gap. For this design, the two float draft were studied from \(1~\mathrm{m}\) to \(2~\mathrm{m}\), while the HP draft was modified to preserve a \(24.7~\mathrm{m}\) gap. Finally, the float–HP gap was independently varied from \(10~\mathrm{m}\) to \(24.7~\mathrm{m}\) by changing the HP draft while keeping the float draft constant at \(2~\mathrm{m}\). The water depth was maintained at \(70~\mathrm{m}\), ensuring that the observed changes in response are attributable solely to the selected sensitivity parameters.
 
-
-\section{Some common mistakes}
-The word `data' is plural, not singular. A graph within a graph is an `inset,' not an `insert.' The word `alternatively' is preferred to the word `alternately' (unless you really mean something that alternates). Use the word `whereas' instead of `while' (unless you are referring to simultaneous events). Do not use the word `essentially' to mean `approximately' or `effectively.' Do not use the word `issue' as a euphemism for `problem.' 
-Be aware of the different meanings of the homophones `affect' (usually a verb) and `effect' (usually a noun), `complement' and `compliment,' `discreet' and `discrete,' `principal' (e.g., `principal investigator') and `principle' (e.g., `principle of measurement'). Do not confuse `imply' and `infer.' 
-Prefixes such as `non,' `sub,' `micro,' `multi,' and `ultra' are not independent words; they should be joined to the words they modify, usually without a hyphen. There is no period after the `et' in the Latin abbreviation `et~al.' (it is also not italicized). The abbreviation `i.e.,' means `that is,' and the abbreviation `e.g.,' means `for example' (these abbreviations are not italicized).
-The suffix `-ize' is correct, both phonetically and etymologically, in both British and American English and there is no reason to use `-ise.' For further information, please see the relevant entry in the Oxford English Dictionary. 
-
-\section{Guidelines for graphics preparation and submission}
-\subsection{Types of graphics}
-The following list outlines the different types of graphics published in IMEJ journals. They are categorized based on their construction, and use of colour or shades of grey:
-\subsubsection{Colour/grey-scale figures}
-Figures that are meant to appear in colour, or shades of black/grey. Such figures may include photographs, illustrations, multicolour graphs, and flowcharts.
-\subsubsection{Line art figures}
-Figures that are composed of only black lines and shapes. These figures should have no shades or half-tones of grey, only black and white.
-\subsubsection{Tables}
-Data charts which are typically black and white, but sometimes include colour.
-\subsubsection{Multipart figures}
-Figures compiled of more than one sub-figure presented side-by-side, or stacked. If a multipart figure is made up of multiple figure types (one part is line-art, and another is grey-scale or colour) the figure should meet the stricter guidelines.
-\subsection{File formats for graphics}
-Format and save your graphics using a suitable graphics processing program that will allow you to export  images as PostScript (PS), Encapsulated PostScript (.EPS), Tagged Image File Format (.TIFF), Portable Network Graphics (.PNG) or JPEG (.JPG) at suitable resolution (see below). It is strongly recommended that graphics be saved in PNG format rather than DOC, XLS, or PPT native formats. Doing so will protect your figures from common problems that occur when working on the files across multiple platforms. When submitting your final paper, your graphics should all be submitted individually in one of these formats along with the manuscript.
-\subsection{Sizing of graphics}
-Most charts, graphs, and tables are one column wide (86~mm) or page wide (178~mm). The maximum depth a graphic can be is 250~mm. When choosing the depth of a graphic, please allow space for a caption. Figures can be sized between column and page widths if the author chooses, however it is recommended that figures are not sized less than column width unless when necessary. 
-IMEJ uses page size A4 with a column measurement of 86~mm. The column spacing is 6~mm. The left and right margins are 16~mm, top margin 22~mm (including header) and bottom margin 14~mm.  The header height is 10~mm.
-\subsection{Raster graphics}
-The proper resolution of your figures will depend on the type of figure it is as defined in the `Types of Figures' section. Photographs, and colour and grey-scale figures should be at least 300~dpi. Line art, including tables should be a minimum of 600~dpi. The JPEG format should only be used for photographs; PNG format should be used for diagrams as it preserves sharp boundaries.
-\subsection{Vector graphics}
-In order to preserve the integrity of figures across multiple computer platforms, we accept vector graphics in the following formats: .EPS/.PDF/.PS. All fonts must be embedded or text converted to outlines in order to achieve the best-quality results.
-\subsection{Colour space}
-The term colour space refers to the entire sum of colours that can be represented within the said medium. For our purposes, the three main colour spaces are: grey-scale, RGB (red/green/blue) and CMYK (cyan/magenta/yellow/black). RGB is generally used with on-screen graphics, whereas CMYK is used for printing purposes.
-Colour figures should be generated all in RGB or all in CMYK colour space. grey-scale images should be submitted in grey-scale colour space. Line art may be provided in grey-scale OR bitmap colour space. Note that `bitmap colour space' and `bitmap file format' are not the same thing. When bitmap colour space is selected, .PNG or .TIFF are the recommended file formats.
-\subsection{Accepted fonts within figures}
-When preparing your graphics IMEJ suggests that you use of one of the following fonts: Palatino, Times New Roman, Helvetica, Arial, Cambria, and Symbol. If you are supplying EPS, PS, or PDF files all fonts must be embedded. Some fonts may only be native to your operating system; without the fonts embedded, parts of the graphic may be distorted or missing.
-A safe option when finalizing your figures is to strip out the fonts before you save the files, creating `outline' type. This converts fonts to artwork what will appear uniformly on any screen.
-\subsection{Using labels within figures}
-\subsubsection{Figure axis labels}
-Figure axis labels are often a source of confusion. Use words rather than symbols. As an example, write the quantity `Power,' or `Power $P$,' not just `$P$.' Put units in parentheses. Do not label axes only with units. As in \ref{fig_QP}, for example, write `Flow speed (m/s)' or `Flow speed (m$\cdot$s$^{-1}$),' not just `m/s.' Do not label axes with a ratio of quantities and units. For example, write `Pressure (Pa),' not `Pressure/Pa.' 
-Multipliers can be especially confusing. Write `Pressure (kPa)' or `Pressure (10$^3$ Pa).' Do not write `Pressure Pa\texttimes1000' because the reader would not know whether the top axis label in \ref{fig_QP}\ meant 16000~Pa or 0.016~Pa. Figure labels should be legible, approximately 8 to 10 point type.
-\subsubsection{Subfigure labels in multipart figures and tables}
-Multipart figures should be combined and labelled before final submission. Labels should appear centred below each subfigure in 8 point Palatino font in the format of (a) (b) (c).
-\subsection{File naming}
-Figures (line artwork or photographs) should be named with the first author’s surname, followed by the number that represents the sequential location of this image in your article. For example, in author ``Smirnov's'' paper, the first three figures would be named smirnov1.tif, smirnov2.tif, and smirnov3.ps.
-Tables should contain only the body of the table (not the caption) and should be named similarly to figures, except that ‘.t’ is inserted in-between the author’s name and the table number. For example, author ``Nguyen's'' first three tables would be named nguyen.t1.tif, nguyen.t2.ps, nguyen.t3.eps.
-\subsection{Referencing a figure or table within your paper}
-When referencing your figures and tables within your paper, use the abbreviation `Fig.' even at the beginning of a sentence. Do not abbreviate `Table.' Tables should be numbered with Roman numerals.
-\subsection{Submitting your graphics}
-Because IMEJ is run for and by the marine renewable energy community, without an external publisher and with only limited resources for graphical design, you are requested to position figures and tables at the top of each page, in the correct place in the document, as you would expect to see them in the final manuscript. In addition to submitting figures within your final manuscript, figures should be submitted individually, separate from the manuscript in one of the file formats listed above in section VI-C. Place figure captions below the figures; place table titles above the tables. Please do not include captions as part of the figures, or put them in `text boxes' linked to the figures. Also, do not place borders around the outside of your figures.
-\subsection{Colour printing in IMEJ}
-As the IMEJ is an online-only journal, an author can publish colour figures on IMEJ at no charge. However, authors may wish to bear in mind that readers will often print journal articles in monochrome.
-
-% An example of a floating figure using the graphicx package.
-% Note that \label must occur AFTER (or within) \caption.
-% For figures, \caption should occur after the \includegraphics.
-% Note that IEEEtran v1.7 and later has special internal code that
-% is designed to preserve the operation of \label within \caption
-% even when the captionsoff option is in effect. However, because
-% of issues like this, it may be the safest practice to put all your
-% \label just after \caption rather than within \caption{}.
-%
-% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
-% option should be used if it is desired that the figures are to be
-% displayed while in draft mode.
-%
-\begin{figure}[!t]
-\centering
-\includegraphics[width=86mm]{FlowVsPressure.png}
-% where an .eps filename suffix will be assumed under latex, 
-% and a .pdf suffix will be assumed for pdflatex; or what has been declared
-% via \DeclareGraphicsExtensions.
-\caption{Flow rate as a function of pressure difference. Note that ``Fig.'' is abbreviated. There is a period after the figure number, followed by two spaces. It is good practice to explain the significance of the figure in the caption.}
-% \label{fig_QP}
-\end{figure}
-
-% Note that the IEEE typically puts floats only at the top, even when this
-% results in a large percentage of a column being occupied by floats.
-
-
-% An example of a double column floating figure using two subfigures.
-% (The subfig.sty package must be loaded for this to work.)
-% The subfigure \label commands are set within each subfloat command,
-% and the \label for the overall figure must come after \caption.
-% \hfil is used as a separator to get equal spacing.
-% Watch out that the combined width of all the subfigures on a 
-% line do not exceed the text width or a line break will occur.
-%
-%\begin{figure*}[!t]
-%\centering
-%\subfloat[Case I]{[width=86mm]{FlowVsPressure.png}%
-%\label{fig_first_case}}
-%\hfil
-%\subfloat[Case II]{[width=86mm]{FlowVsPressure.png}%
-%\label{fig_second_case}}
-%\caption{Flow rate as a function of pressure difference. Note that ``Fig.'' is abbreviated. There is a period after the figure number, followed by two spaces. It is good practice to explain the significance of the figure in the caption}
-%\label{fig_QP2}
-%\end{figure*}
-%
-% Note that often IEEE papers with subfigures do not employ subfigure
-% captions (using the optional argument to \subfloat[]), but instead will
-% reference/describe all of them (a), (b), etc., within the main caption.
-% Be aware that for subfig.sty to generate the (a), (b), etc., subfigure
-% labels, the optional argument to \subfloat must be present. If a
-% subcaption is not desired, just leave its contents blank,
-% e.g., \subfloat[].
-
-
-% An example of a floating table. Note that the
-% \caption command should come BEFORE the table and, similar to other titles in the document, only the first word and proper nouns should be in upper-case. Table text will default to \footnotesize as
-% the IMEJ normally uses this smaller font for tables.
-% The \label must come after \caption as always.
-%
-% Table generated by Excel2LaTeX (https://github.com/krlmlr/Excel2LaTeX)
-% Other options for table generation from data: 
-% - Gnumeric (https://help.gnome.org/users/gnumeric/)
-% - R (https://cran.r-project.org/web/packages/xtable/index.html)
-%
 \begin{table}[!t]
 \centering
-\renewcommand{\arraystretch}{1.3}
+\renewcommand{\arraystretch}{1.2}
+\caption{Design parameters and loading characteristics of the candidate WEC configurations.}
+\label{tab:design_parameters}
 \begin{threeparttable}
-\caption{Example variables and units for marine renewable energy}
-%
-    \begin{tabular}{lll}
-    \toprule
-    Symbol & Quantity & Unit \\
-    \midrule
-    \textit{$U$} & Flow speed & 1 m/s = $0.51\dot{4}$ kn\tnote{a}\\
-    \textit{$p$} & Pressure & Pa \\
-    \textit{$\mu$} & Dynamic viscosity & Pa$\cdot$s \\
-    \textit{$\nu$} & Kinematic viscosity & m$^2$/s \\
-    \textit{$L$} & Distance & 1000 m = 1 km = $\frac{250}{463}$ nmi\tnote{a} \\
-    \textit{$E$} & Energy & 1 kJ = $0.27\dot{7}$ kWh \\
-    \textit{$a$} & Acceleration & m$\cdot$s$^{-2}$ \\
-    \textit{$F$} & Force & N \\
-    \textit{$P$} & Power & W \\
-    \textit{$M$} & Mass  & 1000 kg = 1 t \\
-    \textit{$Q$} & Flow rate & m$^3$/s \\
-    \bottomrule
-    \end{tabular}%
-%
+\begin{tabular}{ccccccccc}
+\toprule
+\makecell{Design} &
+\makecell{Sensitivity\\Parameter} &
+\makecell{Mass\\Ratio} &
+\makecell{\(\mathrm{FD}\)\\(\(\mathrm{m}\))} &
+\makecell{HP Draft\\(\(\mathrm{m}\))} &
+\makecell{Gap\\(\(\mathrm{m}\))} \\
+\midrule
+D0 & \(\mathrm{MR}\) &  \(\mathbf{1.00}\) & 5 & 30  & 23 \\
+
+D0 & \(\mathrm{MR}\) & \(\mathbf{0.5}\) & 5 & 30  & 23 \\
+
+D0 & \(\mathrm{MR}\) & \(\mathbf{0.75}\) & 5 & 30  & 23 \\
+
+D0 & \(\mathrm{MR}\) & \(\mathbf{1.25}\) & 5 & 30  & 23 \\
+\midrule
+D0 & \(\mathrm{FD}\) & 1 & \(\mathbf{2}\) & 27  & 23 \\
+
+D0 & \(\mathrm{FD}\) & 1 & \(\mathbf{3}\) & 28  & 23 \\
+
+D0 & \(\mathrm{FD}\) & 1 & \(\mathbf{5}\) & 30  & 23 \\
+
+D0 & \(\mathrm{FD}\) & 1 & \(\mathbf{7}\) & 32  & 23 \\
+\midrule
+D3 & \(\mathrm{FD}\) & 1.5 & \(\mathbf{1}\) & 26  & 24.7 \\
+
+D3 & \(\mathrm{FD}\) & 1.5 & \(\mathbf{2}\) & 27  & 24.7 \\
+\midrule
+D3 & Gap & 1.5 & 2 & 12.3  & \(\mathbf{10}\) \\
+
+D3 & Gap & 1.5 & 2 & 17.3  & \(\mathbf{15}\) \\
+
+D3 & Gap & 1.5 & 2 & 27  & \(\mathbf{24.7}\) \\
+\bottomrule
+\end{tabular}
 \begin{tablenotes}
-\item Vertical lines in tables are deprecated. Statements that serve as captions for the entire table do not need footnote letters.
-\item[a] The Admiralty measured mile and Admiralty knot should not be used to avoid confusion.
+\item[*] MR-Mass Ratio, \(\mathrm{FD}\)-Float Draft, Gap-Float-HP Gap
 \end{tablenotes}
-%
 \end{threeparttable}
-\label{tab:exUnits}%
-\end{table}%
-%
-\section{References and footnotes}
-\subsection{References}
-In all references, the given name of the author or editor is abbreviated to the initial only and precedes the last name \cite{taylor1919}. Use them all; use et al. only if names are not given \cite{higgsBoson2015}. Abbreviate conference titles.  When referencing a patent, provide the day and the month of issue, or application. References should include enough information for the reader to find the original source. Do not combine references. There must be only one reference with each number \cite{castro1971}. If there is a URL included with the print reference, it can be included at the end of the reference \cite{castro1971,babarit2012}. 
+\end{table}
 
-Capitalize only the first word in a title, except for proper nouns and element symbols. For papers published in translation journals, please give the English citation first, followed by the original foreign-language citation.
+\section{Results and Discussion}
+\label{sec:results_discussion}
+\subsection{Verification of PTO models}
+The velocity of float, heave plate and the relative velocity between the two are shown for designs D0 and D3 in~\figref{fig_regularUDF} and~\figref{fig_irregularUDF} respectively. Regular wave input is used in~\figref{fig_regularUDF}  and irregular wave excitation in~\figref{fig_irregularUDF}. From these plots, it can be said that the results of important parameters obtained from UDF compare well with those obtained from the default solver. Since the UDF is a more flexible and robust model, it is used for all the subsequent simulations.
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.55]{images/regularUDF.png}
+\caption{Variation in velocity of float, heave plate and the relative velocity between them for design D0 under regular waves of \(H = 0.5~\mathrm{m}\) and \(T = 5.5~\mathrm{s}\)}
+\label{fig_regularUDF}
+\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[scale=0.54]{images/irregUDF.png}
+\caption{Variation in velocity of float, heave plate and the relative velocity between them for design D0 under irregular waves of \(H_s = 0.75~\mathrm{m}\) and \(T_p = 5.5~\mathrm{s}\)}
+\label{fig_irregularUDF}
+\end{figure}
+\subsection{Variation of mass ratio}
+In this sensitivity test the mass of the float and heave plate was varied to study the effect of ratio of mass \( \mathrm{MR} = \mathrm{M}_{\mathrm{F}} / \mathrm{M}_{\mathrm{HP}} \) on the average power absorbed by the wave energy converter for a PTO configuration with stiffness \(k=3000~\mathrm{N/m}~\text{and~damping}~C=2000~\mathrm{Ns/m}\). The variation of the power with \(H_s\) and \(T_p\) is shown in the~\figref{fig_massRatio}. The power increases almost linearly with significant wave height, with progressively steeper slopes at lower mass ratios. At every wave height, the ordering of the curves remains unchanged, indicating that increasing the float-to-heave plate mass ratio reduces the energy captured.
+Similarly, the right subplot shows that the average power decreases approximately linearly as the peak period increases from \(7.5~\mathrm{s}~\text{to}~13.5~\mathrm{s}\). The reduction is substantial across all mass ratios, highlighting that the selected PTO configuration is better tuned to shorter-period waves. The separation between the curves persists throughout the period range, indicating that the effect of mass ratio is largely independent of wave period.
+This study demonstrates mass ratio acts as an important design parameter that consistently shifts the power response, with lower mass ratios providing superior performance under all examined sea states. These results suggest that reducing the float-to-heave plate mass ratio (lighter float relative to the heave plate) improves the dynamic response of the system, allows the system to respond more effectively to wave excitation and enhances energy absorption without altering the overall dependence on the incident wave conditions.
+\begin{figure}[htbp]
+\centering
+\subfloat[Variation with significant wave height]{%
+  \includegraphics[width=\columnwidth]{images/MRHs.png}%
+}
+\par\medskip
+\subfloat[Variation with peak wave period]{%
+  \includegraphics[width=\columnwidth]{images/MRTp.png}%
+}
+\caption{Variation in average power with mass ratio across the examined sea states.}
+\label{fig_massRatio}
+\end{figure}
 
-\subsection{Footnotes}
-It is recommended that footnotes be avoided (except for the unnumbered footnote with the receipt date on the first page). Instead, try to integrate the footnote information into the text.
+\subsection{Variation of float draft}
+In this sensitivity test the draft of the float was varied to study the effect of float draft on the average power absorbed by the wave energy converter for a PTO configuration with stiffness \(k=3000~\mathrm{N/m}~\text{and~damping}~C=2000~\mathrm{Ns/m}\). The variation of the power with \(H_s\) and \(T_p\) is shown in the~\figref{fig_powerDepth}. The float draft that were considered in this study are~\(2\mathrm{m}, 3\mathrm{m}, 5\mathrm{m},~\text{and}~7\mathrm{m}\). The average power decreases substantially with increasing float draft, with a reduction of approximately \(50\%\) when the draft is increased from \(2~\mathrm{m}~\text{to}~7~\mathrm{m}\). This trend is consistent across all examined sea statese. The results suggest that optimizing the float draft is critical for maximizing energy absorption and storm survival. On one hand shallower drafts increse the power capture and on the other hand deeper drafts reduce the dynamic response of the system protecting the critical mechanical components.
 
-\section{Submitting your paper for review}
-\subsection{Review stage}
-Contributions to the IMEJ may be submitted electronically on IMEJ’s online manuscript submission and peer-review system at \url{marineenergyjournal.org}.
-First check if you have an existing account. If there is none, please register a new account. After logging in, select “Submissions” and then “New Submission.” 
-Along with other information, you will be asked to confirm that the paper conforms to the publishing policy (see sections \ref{policy} and \ref{princi}). There are various steps to the submission process; you must complete all steps for a complete submission. You may compress large files prior to upload using \textit{7-Zip} or \textit{Gzip}. At the end of each step you must click “Save and Continue”; just uploading the paper is not sufficient. After the last step, you should see a confirmation that the submission is complete. You should also receive an e-mail confirmation. For inquiries regarding the submission of your paper, please contact \url{managing-editor@marineenergyjournal.org}. 
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{images/powerDepth.png}
+\caption{Substantial decrease in nondimensionalized average power output with increase in float draft, (\(k = 3000 ~\mathrm{N/m}, B = 2000 ~\mathrm{Ns/m}\))~across a range of sea states.}
+\label{fig_powerDepth}
+\end{figure}
 
-\subsection{No copyright transfer}
-IMEJ is an open-access-only journal, with the author or authors retaining the copyright on all their articles.  Instead, authors grant a licence to IMEJ to publish the article under the terms of the Creative Commons Attribution (CC BY) License which permits use, distribution and reproduction in any medium, provided the original work is properly cited, and identify IMEJ as the original publisher. You are responsible for obtaining any necessary approvals and/or security clearances. For additional information, visit the IMEJ web site at \url{marineenergyjournal.org}.
+\subsection{Variation of initial float-heave plate gap}
+The $\%$ change in the average power for Design D3 for two PTO parameters~(\(k = 7000 ~\mathrm{N/m},~B = 5000 ~\mathrm{Ns/m}~\text{and}~k = 5000 ~\mathrm{N/m},~B = 4000 ~\mathrm{Ns/m}\)) with increase in the float–heave plate gaps (G) from \(15~\mathrm{m}~\text{to}~25~\mathrm{m}\) across a range of sea states.~For both PTO configurations, increasing the gap consistently improves the average power output under all wave conditions. The relative improvement ranges from \(9.3–19.0\%~\text{and}~12.1–23.4\%\) for the two cases respectively.It was also observed that the lower stiffness and damping configuration is more sensitive to the float–heave plate separation. The percentage gain generally increases with increasing wave period, reaching its maximum for long-period waves (\(Tp = 13.5~\mathrm{s}–15.5~\mathrm{s}\)), while only a modest dependence on significant wave height is observed. the results demonstrate that increasing the float–heave plate separation enhances energy capture across all examined operating conditions, with the greatest relative benefit occurring under longer-period wave conditions.
+% As expected, the absolute power output increases substantially with increasing significant wave height, with the highest power of 1583.37 W obtained for Hs = 3.5 m, Tp = 7.5 s, Case 5, and G = 25 m. Although Case 5 consistently produces higher absolute power than Case 4_3 for most sea states, the latter exhibits larger relative improvements when the initial tether length is increased, suggesting that optimizing the gap is particularly beneficial for PTO systems with lower stiffness and damping. Overall,
 
-\section{IMEJ publishing policy}\label{policy}
-The general IMEJ policy requires that authors should only submit original work that has neither appeared elsewhere for publication, nor is under review for another refereed publication. The submitting author must disclose all prior publication(s) and current submissions of the present work when submitting a manuscript. Do not publish “preliminary” data or results. The submitting author is responsible for obtaining agreement of all co‑authors and any consent required from employers or sponsors before submitting an article. The IMEJ Editorial team strongly discourages courtesy authorship; it is the obligation of the authors to cite only relevant prior work.
- The IMEJ can publish articles related to conferences that have undergone rigorous peer review. Minimally, two reviews are required for every article submitted for peer review.
- 
- \section{Publication principles}\label{princi}
-The IMEJ publishes peer-reviewed articles covering fundamental and applied research, including: case studies; field deployment and testing; technical, economic and social analysis; and laboratory based studies covering wave, tidal and ocean thermal energy conversion. 
-Authors should consider the following points:
-\begin{enumerate}
-\item Technical papers submitted for publication must advance the state of knowledge and must cite relevant prior work. 
-\item The length of a submitted paper should be commensurate with the importance, or appropriate to the complexity, of the work. For example, an obvious extension of previously published work might not be appropriate for publication or might be adequately treated in just a few pages.
-\item Authors must convince both peer reviewers and the editors of the scientific and technical merit of a paper; the standards of proof are higher when extraordinary or unexpected results are reported. 
-\item Because replication is required for scientific progress, papers submitted for publication must provide sufficient information to allow readers to perform similar experiments or calculations and use the reported results. Although not everything need be disclosed, a paper must contain new, useable, and fully described information. Authors should expect to be challenged by reviewers if the results are not supported by adequate data and critical details.
-\item Papers that describe ongoing work or announce the latest technical achievement, may not be appropriate for publication.  However, they may suitable for presentation at the European Wave and Tidal Energy Conference (\url{ewtec.org}), for example.
-\end{enumerate}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{images/Figure_2_Gap_Percentage_Difference.png}
+\caption{Increase in the average power output of the wave energy converter for two PTO configurations, (\(k = 7000 ~\mathrm{N/m}, B = 5000 ~\mathrm{Ns/m}~\text{and}~k = 5000 ~\mathrm{N/m}, B = 4000 ~\mathrm{Ns/m}\)), with increase in float–heave plate gaps (G) from \(15~\mathrm{m}\) to \(25~\mathrm{m}\) across a range of sea states.}
+\label{fig_gapSensitivity}
+\end{figure}
+
+\subsection{Variation of average power between designs}
+The average power obtained by the five different designs were compared for the PTO parameter of Case4 (\(k = 5000~\mathrm{N/m}~\text{and}~B = 2000 ~\mathrm{Ns/m}\)). Though this is not the optimal PTO parameters for all the different designs,~\tabref{tab:average_power_designs} provides an insight into the performance of various designs.
+
+
+\begin{table}[!t]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\begin{threeparttable}
+\caption{Comparison of avg power between different designs}
+\label{tab:average_power_designs}
+\begin{tabular}{cccc}
+\toprule
+Design & $2R_f$ (m) & $2R_{hp}$ (m) & Average Power (W) \\
+\midrule
+D0 & 2 & 2 & \(286\) \\
+D1 & 1.554 & 3 & \(56.4\) \\
+D2 & 1.64 & 2.96 & \(101\) \\
+D3 & 3 & 2.7 & \(195\) \\
+D4 & 5.3 & 2.4 & \(146\) \\
+D5 & 2.96 & 2.7 & \(169\) \\
+D6 & 3.5 & 2.7 & \(172\) \\
+\bottomrule
+\end{tabular}
+\end{threeparttable}
+\end{table}
+
+\subsection{Optimization of PTO parameters}
+A thorough search for optimal coefficients is done for all the designs. The average annual power is obtained by simulating \(18\) sea states. Each sea state was simulated using \(58\) different combinations of PTO coefficients (stiffness \(k\) and damping \(B\) coefficient). A contour plot showing the different values of power generated corresponding to the $k$ and $B$ coefficients for design D3 in shown in~\figref{fig_optiD3abs}. The maximum power captured is \(380~\mathrm{W}\) at \(k = 5000~\mathrm{N/m}\) and \(B = 4000~\mathrm{Ns/m}\). The red line in the contour plot represents the acceptable minimum power from the design based on the specification. Scaling the power with the occurrence of the sea state gives the average annual power for a particular site. This is shown in~\figref{fig_optimalContour}. 
+\par
+The values of the mechanical power generated at various sites and the corresponding PTO coefficients are tabulated in~\tabref{tab:power_comparison}.~Two methodologies were used to obtain optimal power.~These methods are referred to as PTO1 and PTO2 in~\tabref{tab:power_comparison}.
+\begin{itemize}[leftmargin=*]
+  \item In PTO 1 the absolute power obtained by using a set of PTO coefficients at a particular sea state at that site is multiplied by the occurrence of that sea state at that site. This method is repeated for all the other PTO coefficients. The sum of the maximum power obtained by using a constant PTO is added to obtain the annual avg power.
+  \item In PTO2, it is assumed that the PTO adapts to a combination of coefficients, so that it produces max power at that sea state.
+\end{itemize} 
+The maximum power is obtained at PacWave followed by cape code.~The power obtained using an adaptive PTO (PTO2) is higher compared to the static PTO (PTO1) among all cases and sites. Approximately \(8\%-9\%\) improvement was recorded between the power generated using PTO2. This is expected as the system adapts to the sea state to deliver maximum power. The power obtained with D0 is also higher, compared to any other design. However, due to high tension in the tether, this design might incur higher material cost. D3 seems to be the ideal configuration as it reduces the material cost as well as delivers the required mechanical power. D6 also seems to be a good configuration as it delivers higher power compared to D3, though the material cost is expected to be higher due to the larger float diameter, it is expected to house the PTO system.
+
+\begin{table}[htbp]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\setlength{\tabcolsep}{4pt}
+\caption{Average mechanical power for different designs, PTO configurations and sites. Power unit in Watts.}
+\label{tab:power_comparison}
+\begin{tabular}{llrrrrrr}
+\toprule
+ &  & \multicolumn{6}{c}{Deployment site} \\
+\cmidrule(lr){3-8}
+Design & & Oahu & \makecell{Pac-\\Wave} & \makecell{San\\Diego} & \makecell{New\\Orleans} & \makecell{Cana-\\veral} & \makecell{Cape\\Cod} \\
+\midrule
+D0 & PTO1 & \(295\) & \(320\) & \(89\) & \(235\) & \(199\) & \(284\) \\
+             & PTO2 & \(311\) & \(338\) & \(98\) & \(244\) & \(291\) & \(308\) \\
+\midrule
+D2 & PTO1 & \(135\) & \(139\) & \(45\) & \(112\) & \(94\) & \(125\) \\
+             & PTO2 & \(151\) & \(155\) & \(50\) & \(124\) & \(106\) & \(144\) \\
+\midrule
+D3 & PTO1 & \(215\) & \(223\) & \(70\) & \(180\) & \(152\) & \(214\) \\
+             & PTO2 & \(219\) & \(230\) & \(89\) & \(219\) & \(173\) & \(235\) \\
+\midrule
+D6 & PTO1 & \(421\) & \(445\) & \(139\) & \(357\) & \(300\) & \(423\) \\
+             & PTO2 & \(428\) & \(454\) & \(147\) & \(372\) & \(315\) & \(437\) \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item[] PTO1-Constant PTO coefficients for all sea states
+\item[] PTO2-Optimal PTO coefficients for each sea state
+\end{tablenotes}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{images/optiCoffabsD3.png}
+\caption{Absolute power generated for various PTO coefficients for design D3}
+\label{fig_optiD3abs}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\columnwidth]{images/optimalContourD3.png}
+\caption{Optimal contour for PTO coefficients for design D3at various sites}
+\label{fig_optimalContour}
+\end{figure}
+
+
+A contour plot showing the different values of power generated corresponding to the $k$ and $B$ coefficients for designs D0, D3 and D5 are shown in~\figref{fig_optimalContour}~respectively. When comparing all the sites, D0 design produces a max annual avg power of \(422~\mathrm{W}\) followed by D5 at \(355~\mathrm{W}\) and D3 design which captures \(223~\mathrm{W}\) at a depth of \(2~\mathrm{m}\). The red line in the contour plot represents the acceptable minimum power from the design based on the specification. Based on the contour plots the PTO parameters can be tuned to generate the maximum power for a particular design. Compared to D3, D0 and D5 show a narrow band of optimal PTO coefficient for maximum average power capture.
+
+% \begin{figure}[htbp]
+% \centering
+% \subfloat[DO]{%
+%   \includegraphics[width=\columnwidth]{images/optimalContourD0.png}%
+% }
+% \par\medskip
+% \subfloat[D3]{%
+%   \includegraphics[width=\columnwidth]{images/optimalContourD3.png}%
+% }
+% \par\medskip
+% \subfloat[D5]{%
+%   \includegraphics[width=\columnwidth]{images/optimalContourD5.png}%
+% }
+% \caption{Contour of Average Power for various PTO coefficient}
+% \label{fig_optimalContour}
+% \end{figure}
 
 \section{Discussion and Conclusion}
 This study investigated the hydrodynamic performance and design optimization of a submerged wave energy converter (WEC) equipped with a tether–PTO system. The report first introduced the overall system architecture, including the prime movers, tether specifications, PTO algorithm, and PTO parameters. A numerical modelling framework was then developed, covering the governing theory, model implementation, verification of the developed UDF and the selection of representative sea states for performance assessment. The mechanical average annual power capture at six different sites along the US coasts for different designs is compared.
@@ -694,15 +747,15 @@ Overall, the validated numerical model and the comprehensive parametric analyses
 Appendices, if needed, appear before the acknowledgement. 
 
 
-\section{}
-The second appendix text goes here. You can choose not to have a title for an appendix by leaving the argument blank.
+% \section{}
+% The second appendix text goes here. You can choose not to have a title for an appendix by leaving the argument blank.
 
 \vfill
 \newpage
 
 % use section* for acknowledgment
 \section*{Acknowledgement}
-The authors would like to thank Department of Defense, NAVSEA-BEST, NSWCCD, NIWC PAC, NAVFAC EXWC and U.S. DoD contractor Battelle. This work is supported under NAVSEA Contract Number: N66001-18-9-4703.\newline
+This project is funded by the NAVSEA, as a one-year grant to design a sub-surface WEC capable of continuous power generation of \(100~\mathrm{W}\) at various sites with distinct wave characteristics off the coast of the United States. The authors would like to thank Department of Defense, NAVSEA-BEST, NSWCCD, NIWC PAC, NAVFAC EXWC and U.S. DoD contractor Battelle. This work is supported under NAVSEA Contract Number: N66001-18-9-4703.\newline
 Disclaimer:
 Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the Department of Defense.
 
