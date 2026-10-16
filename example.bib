@@ -101,6 +101,32 @@ year = {2024},
 url = {https://www.sciencedirect.com/science/article/pii/S0306261924002605}
 }
 
+@article{jmse13122407,
+AUTHOR = {Park, Se Hwan and Cheon, Sang Gyu and Chung, Woo Chul},
+TITLE = {Numerical Analysis Comparison Between ANSYS AQWA and OrcaFlex for a Hollow Box-Shaped Floating Structure},
+JOURNAL = {Journal of Marine Science and Engineering},
+VOLUME = {13},
+YEAR = {2025},
+NUMBER = {12},
+ARTICLE-NUMBER = {2407},
+URL = {https://www.mdpi.com/2077-1312/13/12/2407},
+ISSN = {2077-1312},
+ABSTRACT = {This study presents a numerical comparison between ANSYS AQWA (2023 R2) and the OrcaFlex package (OrcaWave + OrcaFlex) for a 10 × 10 × 2 m rectangular floating structure. The hydrodynamic coefficients and displacement/load RAOs obtained from the two solvers exhibit nearly identical behavior, with deviations below 1% across all six motion modes. Under irregular wave conditions (Hs = 7 m, Tp = 8 s, 0° heading) and three mooring line lengths (145, 150, and 155 m), both solvers produced comparable mean surge motions and mean mooring tensions. However, OrcaFlex predicted 40–50% higher peak tensions due to its fully dynamic representation of slack–taut transitions and snap loading effects, whereas AQWA’s quasi-static catenary formulation filtered out these short-duration peaks. These findings confirm that although the two solvers are highly consistent in frequency-domain hydrodynamics, their time-domain predictions diverge when nonlinear mooring behavior becomes dominant. The study provides a transparent and reproducible benchmarking framework for cross-validation of potential-flow-based tools used in floating offshore structure design.},
+DOI = {10.3390/jmse13122407}
+}
+@article{chen_fully_2024,
+	title = {A fully coupled time domain model capturing nonlinear dynamics of float-over deck installation},
+	volume = {293},
+	issn = {0029-8018},
+	url = {https://www.sciencedirect.com/science/article/pii/S0029801824000581},
+	doi = {https://doi.org/10.1016/j.oceaneng.2024.116721},
+	abstract = {This study develops an efficient constant parameter time-domain model (CPTDM) to investigate the nonlinear dynamics associated with float-over installations that are comprised of rigid body motions, impact-absorbing systems, and mooring dynamics. The Cummins equation is used to deal with the wave-induced floating body's motions. To improve the calculation efficiency in time domain, state-space models are adopted. Bilinear spring-damper systems are introduced in the model to consider the limited load capacities of impact-absorbing systems. An open-sourced mooring system dynamics modeler, MoorDyn, is coupled to the CPTDM in a coupling approach. The developed CPTDM is validated against a standard hydrodynamic analysis package, AQWA, showing satisfactory agreements in general. The most striking advance of the CPTDM developed here is that it could appropriately capture the nonlinear physics relevant to float-over operations. Further applications of the CPTDM could include walk-to-work operations for offshore wind maintenance.},
+	journal = {Ocean Engineering},
+	author = {Chen, Mingsheng and Zou, Meiyan and Zhu, Ling and Ouyang, MingJun and Liang, Qiyu and Zhao, Wenhua},
+	year = {2024},
+	keywords = {Constant parameter time-domain model (CPTDM), Float-over installation, Multi-body impact, Nonlinear dynamics},
+	pages = {116721},
+}
 @techreport{doe2018wind,
 author = {{U.S. Department of Energy}},
 institution = {{U.S. Department of Energy}},
@@ -109,6 +135,14 @@ number = {DOE/EE-1924},
 month = {August},
 year = {2019},
 url = {https://www.energy.gov/sites/default/files/2019/09/f66/73355-v2.pdf}
+}
+
+@techreport{cummins1962,
+author = {Cummins, W. E.},
+institution = {{David Taylor Model Basin}},
+title = {{The Impulse Response Function and Ship Motion}},
+type = {Technical report},
+year = {1962}
 }
 
 @article{Yang30122020,
@@ -151,6 +185,7 @@ year = {1987}
 	file = {PDF:C\:\\Users\\mishravi\\Zotero\\storage\\PGLGCL8A\\Hamilton et al. - 2021 - The MBARI-WEC a power source for ocean sensing.pdf:application/pdf},
 }
 
+@misc{EWR_Dataset_35,title = {Wave Energy Conversion for Powering Aquaculture},author = {Grasberger, Jeff and Anderson, Megan and Nguyen, Jessica},abstractNote = {This white paper explores the integration of wave energy converters (WECs) with aquaculture systems, aiming to enhance energy-water resilience and local food security. The focal area is the intersection of energy and water, addressing significant challenges such as reliance on fossil fuels, high operational costs, and vulnerability to supply disruptions. The paper identifies near-term opportunities, including comprehensive site assessments, determining technological synergies, selecting appropriate aquaculture species, developing partnerships, and completing pilot projects. These actions are crucial for optimizing and understanding the challenges with the co-location of WECs and aquaculture systems over the next 3-5 years.},url = {https://ewr.openei.org/submissions/35},year = {2026},howpublished = {Energy-Water Resilience, SNL, https://ewr.openei.org/submissions/35},note = {Accessed: 2026-09-28}}
 
 @article{jmse12010137,
 AUTHOR = {Shomberg, Russell and Jakuba, Michael and Yoerger, Dana},

@@ -38,6 +38,14 @@ M.~Chen, R.~Vivekanandan, C.~J. Rusch, D.~Okushemiya, D.~Manalang,
   \url{https://www.energy.gov/sites/default/files/2019/09/f66/73355-v2.pdf}
 \BIBentrySTDinterwordspacing
 
+\bibitem{EWR_Dataset_35}
+\BIBentryALTinterwordspacing
+J.~Grasberger, M.~Anderson, and J.~Nguyen, ``Wave energy conversion for
+  powering aquaculture,'' Energy-Water Resilience, SNL,
+  https://ewr.openei.org/submissions/35, 2026, accessed: 2026-09-28. [Online].
+  Available: \url{https://ewr.openei.org/submissions/35}
+\BIBentrySTDinterwordspacing
+
 \bibitem{green2019enabling}
 R.~Green, A.~Copping, R.~J. Cavagnaro, D.~Rose, D.~Overhus, and D.~Jenne,
   ``{Enabling Power at Sea: Opportunities for Expanded Ocean Observations
@@ -96,6 +104,27 @@ R.~Shomberg, M.~Jakuba, and D.~Yoerger, ``Design proposal and feasibility
   analysis for a near-surface wave-powered profiling float,'' \emph{Journal of
   Marine Science and Engineering}, vol.~12, no.~1, 2024. [Online]. Available:
   \url{https://www.mdpi.com/2077-1312/12/1/137}
+\BIBentrySTDinterwordspacing
+
+\bibitem{cummins1962}
+W.~E. Cummins, ``{The Impulse Response Function and Ship Motion},'' {David
+  Taylor Model Basin}, Technical report, 1962.
+
+\bibitem{jmse13122407}
+\BIBentryALTinterwordspacing
+S.~H. Park, S.~G. Cheon, and W.~C. Chung, ``Numerical analysis comparison
+  between ansys aqwa and orcaflex for a hollow box-shaped floating structure,''
+  \emph{Journal of Marine Science and Engineering}, vol.~13, no.~12, 2025.
+  [Online]. Available: \url{https://www.mdpi.com/2077-1312/13/12/2407}
+\BIBentrySTDinterwordspacing
+
+\bibitem{chen_fully_2024}
+\BIBentryALTinterwordspacing
+M.~Chen, M.~Zou, L.~Zhu, M.~Ouyang, Q.~Liang, and W.~Zhao, ``A fully coupled
+  time domain model capturing nonlinear dynamics of float-over deck
+  installation,'' \emph{Ocean Engineering}, vol. 293, p. 116721, 2024.
+  [Online]. Available:
+  \url{https://www.sciencedirect.com/science/article/pii/S0029801824000581}
 \BIBentrySTDinterwordspacing
 
 \bibitem{alday2024effects}

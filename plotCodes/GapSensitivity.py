@@ -69,6 +69,23 @@ Diff_Case43 = np.array([
     [15.9, 19.7, 22.3, 23.0]
 ])
 
+# Percentage reduction for G = 10 m relative to G = 25 m.
+# Rows follow Hs = [0.75, 1.5, 2.5, 3.5] and columns follow
+# Tp = [7.5, 9.5, 11.5, 13.5].
+Reduction_G10_Case5 = np.array([
+    [30.17, 32.98, 34.50, 35.92],
+    [29.88, 33.03, 34.45, 35.80],
+    [29.55, 33.78, 34.81, 35.88],
+    [29.40, 33.85, 36.20, 36.11]
+])
+
+Reduction_G10_Case43 = np.array([
+    [36.74, 40.07, 41.88, 43.22],
+    [35.62, 39.49, 41.51, 42.98],
+    [33.76, 38.81, 41.14, 42.54],
+    [32.25, 37.62, 41.02, 42.15]
+])
+
 
 # ============================================================
 # JOURNAL STYLE
@@ -267,6 +284,10 @@ axes[0].set_ylabel(
     r"Increase in Average Power ($\%$)"
 )
 
+axes[1].set_ylabel(
+    r"Increase in Average Power ($\%$)"
+)
+
 axes[1].legend(
     loc="upper left",
     frameon=False
@@ -278,8 +299,99 @@ fig.savefig(
     bbox_inches="tight"
 )
 
+
+# ============================================================
+# FIGURE 3
+# Percentage Reduction for G = 10 m and G = 15 m relative to G = 25 m
+# — 2 x 1 Line Plot
+# ============================================================
+
+reduction_g15_data = [
+    100 * (P_Case5_G25 - P_Case5_G15) / P_Case5_G25,
+    100 * (P_Case43_G25 - P_Case43_G15) / P_Case43_G25
+]
+
+reduction_g10_data = [
+    Reduction_G10_Case5,
+    Reduction_G10_Case43
+]
+
+fig, axes = plt.subplots(
+    2, 1,
+    figsize=(6.8, 6.0),
+    sharey=True
+)
+
+titles = [
+    r"(a) $k=7000~\mathrm{N/m}$, $B=5000~\mathrm{N\cdot s/m}$",
+    r"(b) $k=5000~\mathrm{N/m}$, $B=4000~\mathrm{N\cdot s/m}$"
+]
+
+for ax, g15_data, g10_data, title in zip(
+    axes,
+    reduction_g15_data,
+    reduction_g10_data,
+    titles
+):
+
+    for i, h in enumerate(Hs):
+
+        ax.plot(
+            Tp,
+            g15_data[i, :],
+            marker=markers[i],
+            linewidth=1.2,
+            markersize=4.5,
+            linestyle="-",
+            label=fr"$H_s={h}$ m, $G=15$ m"
+        )
+
+        ax.plot(
+            Tp,
+            g10_data[i, :],
+            marker=markers[i],
+            linewidth=1.2,
+            markersize=4.5,
+            linestyle="--",
+            label=fr"$H_s={h}$ m, $G=10$ m"
+        )
+
+    ax.set_xlabel(r"$T_p$ (s)")
+    ax.set_title(title)
+    ax.set_xticks(Tp)
+    ax.set_ylim(5, 45)
+    ax.set_yticks(np.arange(5, 46, 5))
+    ax.grid(True, linestyle="--", linewidth=0.5, alpha=0.5)
+    ax.tick_params(direction="in", length=3)
+
+    for spine in ax.spines.values():
+        spine.set_linewidth(0.7)
+
+
+axes[0].set_ylabel(
+    r"Reduction in Average Power ($\%$)"
+)
+
+axes[1].set_ylabel(
+    r"Reduction in Average Power ($\%$)"
+)
+
+fig.subplots_adjust(bottom=0.17, hspace=0.35)
+
+handles, labels = axes[1].get_legend_handles_labels()
+fig.legend(
+    handles,
+    labels,
+    loc="lower center",
+    bbox_to_anchor=(0.5, 0.025),
+    frameon=False,
+    ncol=4,
+    columnspacing=1.0,
+    handletextpad=0.4
+)
+
 fig.savefig(
-    "Figure_2_Gap_Percentage_Difference.png",
+    "Figure_3_Gap_Percentage_Reduction.png",
     dpi=600,
     bbox_inches="tight"
 )
