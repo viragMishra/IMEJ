@@ -91,25 +91,25 @@ Reduction_G10_Case43 = np.array([
 # JOURNAL STYLE
 # ============================================================
 plt.rcParams.update({
-    "font.family": "serif",
-    "font.serif": ["Times New Roman"],
+    "font.family": "Arial",
+    "font.serif": ["Arial"],
 
     # LaTeX-like mathematics
     "mathtext.fontset": "stix",
 
     # General
-    "font.size": 8,
+    "font.size": 9,
 
     # Axes
     "axes.labelsize": 9,
     "axes.titlesize": 9,
 
     # Ticks
-    "xtick.labelsize": 8,
-    "ytick.labelsize": 8,
+    "xtick.labelsize": 9,
+    "ytick.labelsize": 9,
 
     # Legend
-    "legend.fontsize": 8,
+    "legend.fontsize": 9,
 
     # Lines
     "lines.linewidth": 1.2,
@@ -369,11 +369,11 @@ for ax, g15_data, g10_data, title in zip(
 
 
 axes[0].set_ylabel(
-    r"Reduction in Average Power ($\%$)"
+    r"Reduction in Avg. Power ($\%$)"
 )
 
 axes[1].set_ylabel(
-    r"Reduction in Average Power ($\%$)"
+    r"Reduction in Avg. Power ($\%$)"
 )
 
 fig.subplots_adjust(bottom=0.17, hspace=0.35)

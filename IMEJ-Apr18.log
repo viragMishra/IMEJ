@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.9.25)  28 SEP 2026 23:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.9.25)  18 OCT 2026 17:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Public/Documents/WorkingFolder/IMEJ/IMEJ-Apr18.tex
-(c:/Users/Public/Documents/WorkingFolder/IMEJ/IMEJ-Apr18.tex
+**c:/Users/Public/Documents/WorkingFolder/IMEJ-Over/IMEJ-Apr18.tex
+(c:/Users/Public/Documents/WorkingFolder/IMEJ-Over/IMEJ-Apr18.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (IMEJ.cls
@@ -345,44 +345,19 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 105.
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 108.
-)) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
-Package: lineno 2026/03/08 line numbers on paragraphs v5.9
- (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
- (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-))
-\linenopenalty=\count325
-\output=\toks28
-\linenoprevgraf=\count326
-\linenumbersep=\dimen264
-\linenumberwidth=\dimen265
-\c@linenumber=\count327
-\c@pagewiselinenumber=\count328
-\c@LN@truepage=\count329
-\c@internallinenumber=\count330
-\c@internallinenumbers=\count331
-\quotelinenumbersep=\dimen266
-\bframerule=\dimen267
-\bframesep=\dimen268
-\bframebox=\box61
-\@LN@amsmath@ams@eqpen=\count332
-
-
-LaTeX Warning: Command \@parboxrestore  has changed.
-               Check if current package is valid.
-
-) (C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
+)) (C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
  (C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
+) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
- (C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+ (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
  (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
@@ -398,14 +373,16 @@ Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-)
-\c@section@level=\count333
+ (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count325
 ) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen269
-\Hy@linkcounter=\count334
-\Hy@pagecounter=\count335
+\@linkdim=\dimen264
+\Hy@linkcounter=\count326
+\Hy@pagecounter=\count327
  (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -413,7 +390,7 @@ Now handling font encoding PD1 ...
 ) (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count336
+\Hy@SavedSpaceFactor=\count328
  (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -427,17 +404,17 @@ Package hyperref Info: Plain pages OFF on input line 4216.
 Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
-\c@Hy@tempcnt=\count337
+\c@Hy@tempcnt=\count329
 LaTeX Info: Redefining \url on input line 4807.
-\XeTeXLinkMargin=\dimen270
+\XeTeXLinkMargin=\dimen265
  (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count338
-\Field@Width=\dimen271
-\Fld@charsize=\dimen272
+\Fld@menulength=\count330
+\Field@Width=\dimen266
+\Fld@charsize=\dimen267
 Package hyperref Info: Hyper figures OFF on input line 6084.
 Package hyperref Info: Link nesting OFF on input line 6089.
 Package hyperref Info: Hyper index ON on input line 6092.
@@ -445,15 +422,15 @@ Package hyperref Info: backreferencing OFF on input line 6099.
 Package hyperref Info: Link coloring ON on input line 6102.
 Package hyperref Info: Link coloring with OCG OFF on input line 6109.
 Package hyperref Info: PDF/A mode OFF on input line 6114.
-\Hy@abspage=\count339
-\c@Item=\count340
-\c@Hfootnote=\count341
+\Hy@abspage=\count331
+\c@Item=\count332
+\c@Hfootnote=\count333
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
-\Fld@listcount=\count342
-\c@bookmark@seq@number=\count343
+\Fld@listcount=\count334
+\c@bookmark@seq@number=\count335
  (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
  (C:\Users\mishravi\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
@@ -467,7 +444,7 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count344
+\l__color_backend_stack_int=\count336
 ) (IMEJ-Apr18.aux)
 \openout1 = `IMEJ-Apr18.aux'.
 
@@ -493,17 +470,17 @@ LaTeX Font Info:    ... okay on input line 34.
 -- Lines per column: 62 (exact).
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count345
-\scratchdimen=\dimen273
-\scratchbox=\box62
-\nofMPsegments=\count346
-\nofMParguments=\count347
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count348
-\MPscratchDim=\dimen274
-\MPnumerator=\count349
-\makeMPintoPDFobject=\count350
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count337
+\scratchdimen=\dimen268
+\scratchbox=\box61
+\nofMPsegments=\count338
+\nofMParguments=\count339
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count340
+\MPscratchDim=\dimen269
+\MPnumerator=\count341
+\makeMPintoPDFobject=\count342
+\everyMPtoPDFconversion=\toks29
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -522,106 +499,99 @@ LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 81
  (C:\Program Files\MiKTeX\tex/latex/psnfss\ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 82.
- (C:\Program Files\MiKTeX\tex/latex/psnfss\ot1phv.fd
-File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
-)
 Overfull \vbox (0.93286pt too high) has occurred while \output is active []
 
  [1{C:/Users/mishravi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program Files/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-<images/design.png, id=125, 70.8246pt x 145.0218pt>
-File: images/design.png Graphic file (type png)
-<use images/design.png>
-Package pdftex.def Info: images/design.png  used on input line 106.
+<images/mishra1.png, id=124, 70.8246pt x 145.0218pt>
+File: images/mishra1.png Graphic file (type png)
+<use images/mishra1.png>
+Package pdftex.def Info: images/mishra1.png  used on input line 106.
 (pdftex.def)             Requested size: 113.31947pt x 232.03519pt.
-<images/rectangle_comparison.png, id=129, 1727.253pt x 257.0403pt>
-File: images/rectangle_comparison.png Graphic file (type png)
-<use images/rectangle_comparison.png>
-Package pdftex.def Info: images/rectangle_comparison.png  used on input line 114.
+<images/mishra2.png, id=128, 1727.253pt x 257.0403pt>
+File: images/mishra2.png Graphic file (type png)
+<use images/mishra2.png>
+Package pdftex.def Info: images/mishra2.png  used on input line 114.
 (pdftex.def)             Requested size: 506.45905pt x 75.36734pt.
- [2 <./images/design.png>]
-<images/knB.png, id=164, 357.846pt x 256.668pt>
-File: images/knB.png Graphic file (type png)
-<use images/knB.png>
-Package pdftex.def Info: images/knB.png  used on input line 212.
+ [2 <./images/mishra1.png>]
+<images/mishra3.png, id=163, 357.846pt x 256.668pt>
+File: images/mishra3.png Graphic file (type png)
+<use images/mishra3.png>
+Package pdftex.def Info: images/mishra3.png  used on input line 212.
 (pdftex.def)             Requested size: 243.09818pt x 174.36351pt.
- [3 <./images/rectangle_comparison.png>]
-<images/18seas.png, id=185, 570.933pt x 259.6902pt>
-File: images/18seas.png Graphic file (type png)
-<use images/18seas.png>
-Package pdftex.def Info: images/18seas.png  used on input line 227.
+ [3 <./images/mishra2.png>]
+<images/mishra4.png, id=184, 570.933pt x 259.6902pt>
+File: images/mishra4.png Graphic file (type png)
+<use images/mishra4.png>
+Package pdftex.def Info: images/mishra4.png  used on input line 227.
 (pdftex.def)             Requested size: 232.97765pt x 86.09427pt.
-<images/locations.png, id=188, 1062.97125pt x 389.95688pt>
-File: images/locations.png Graphic file (type png)
-<use images/locations.png>
-Package pdftex.def Info: images/locations.png  used on input line 235.
+<images/mishra5.png, id=187, 1062.97125pt x 389.95688pt>
+File: images/mishra5.png Graphic file (type png)
+<use images/mishra5.png>
+Package pdftex.def Info: images/mishra5.png  used on input line 235.
 (pdftex.def)             Requested size: 233.8544pt x 85.79077pt.
- [4 <./images/knB.png> <./images/18seas.png> <./images/locations.png>]
-<images/regularUDF.png, id=212, 437.38406pt x 327.47343pt>
-File: images/regularUDF.png Graphic file (type png)
-<use images/regularUDF.png>
-Package pdftex.def Info: images/regularUDF.png  used on input line 343.
-(pdftex.def)             Requested size: 240.56197pt x 180.11095pt.
-<images/irregUDF.png, id=213, 456.20438pt x 229.60782pt>
-File: images/irregUDF.png Graphic file (type png)
-<use images/irregUDF.png>
-Package pdftex.def Info: images/irregUDF.png  used on input line 349.
-(pdftex.def)             Requested size: 246.34668pt x 123.98637pt.
-
-Overfull \hbox (1.65298pt too wide) in paragraph at lines 349--350
- [][] 
- []
-
-<images/MRHs.png, id=215, 717.882pt x 552.3837pt>
-File: images/MRHs.png Graphic file (type png)
-<use images/MRHs.png>
-Package pdftex.def Info: images/MRHs.png  used on input line 361.
-(pdftex.def)             Requested size: 244.6937pt x 188.27997pt.
-<images/MRTp.png, id=216, 712.1004pt x 551.9019pt>
-File: images/MRTp.png Graphic file (type png)
-<use images/MRTp.png>
-Package pdftex.def Info: images/MRTp.png  used on input line 365.
-(pdftex.def)             Requested size: 244.6937pt x 189.64001pt.
-[5 <./images/regularUDF.png>]
+ [4 <./images/mishra3.png> <./images/mishra4.png> <./images/mishra5.png>]
+<images/mishra6.png, id=211, 1156.32pt x 867.24pt>
+File: images/mishra6.png Graphic file (type png)
+<use images/mishra6.png>
+Package pdftex.def Info: images/mishra6.png  used on input line 343.
+(pdftex.def)             Requested size: 244.6937pt x 183.51524pt.
+<images/mishra7.png, id=212, 1156.32pt x 867.24pt>
+File: images/mishra7.png Graphic file (type png)
+<use images/mishra7.png>
+Package pdftex.def Info: images/mishra7.png  used on input line 349.
+(pdftex.def)             Requested size: 506.45905pt x 379.84003pt.
+<images/mishra8a.png, id=214, 565.6332pt x 407.6028pt>
+File: images/mishra8a.png Graphic file (type png)
+<use images/mishra8a.png>
+Package pdftex.def Info: images/mishra8a.png  used on input line 361.
+(pdftex.def)             Requested size: 244.6937pt x 176.32932pt.
+<images/mishra8b.png, id=215, 563.9469pt x 407.3619pt>
+File: images/mishra8b.png Graphic file (type png)
+<use images/mishra8b.png>
+Package pdftex.def Info: images/mishra8b.png  used on input line 365.
+(pdftex.def)             Requested size: 244.6937pt x 176.75345pt.
+ [5 <./images/mishra6.png>]
 Underfull \hbox (badness 2073) in paragraph at lines 371--372
 \OT1/ppl/m/n/10 er-age power ab-sorbed by the wave en-ergy con-
  []
 
-<images/powerDepth.png, id=230, 1078.2684pt x 862.422pt>
-File: images/powerDepth.png Graphic file (type png)
-<use images/powerDepth.png>
-Package pdftex.def Info: images/powerDepth.png  used on input line 375.
-(pdftex.def)             Requested size: 244.6937pt x 195.70782pt.
-[6 <./images/irregUDF.png> <./images/MRHs.png> <./images/MRTp.png> <./images/powerDepth.png>]
-<images/Figure_2_Gap_Percentage_Reduction.png, id=242, 419.6478pt x 393.6306pt>
-File: images/Figure_2_Gap_Percentage_Reduction.png Graphic file (type png)
-<use images/Figure_2_Gap_Percentage_Reduction.png>
-Package pdftex.def Info: images/Figure_2_Gap_Percentage_Reduction.png  used on input line 385.
-(pdftex.def)             Requested size: 244.6937pt x 229.52519pt.
-<images/heatmap_percent_change.png, id=245, 671.1474pt x 390.258pt>
-File: images/heatmap_percent_change.png Graphic file (type png)
-<use images/heatmap_percent_change.png>
-Package pdftex.def Info: images/heatmap_percent_change.png  used on input line 396.
-(pdftex.def)             Requested size: 244.6937pt x 142.28517pt.
- [7 <./images/Figure_2_Gap_Percentage_Reduction.png> <./images/heatmap_percent_change.png>]
-<images/optiCoffabsD3.png, id=264, 1119.43219pt x 704.6325pt>
-File: images/optiCoffabsD3.png Graphic file (type png)
-<use images/optiCoffabsD3.png>
-Package pdftex.def Info: images/optiCoffabsD3.png  used on input line 468.
-(pdftex.def)             Requested size: 244.6937pt x 154.01971pt.
-<images/optimalContourD3.png, id=265, 469.755pt x 225.7233pt>
-File: images/optimalContourD3.png Graphic file (type png)
-<use images/optimalContourD3.png>
-Package pdftex.def Info: images/optimalContourD3.png  used on input line 474.
-(pdftex.def)             Requested size: 244.6937pt x 117.57654pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+<images/mishra9.png, id=229, 1066.9461pt x 1009.8528pt>
+File: images/mishra9.png Graphic file (type png)
+<use images/mishra9.png>
+Package pdftex.def Info: images/mishra9.png  used on input line 375.
+(pdftex.def)             Requested size: 244.6937pt x 231.59866pt.
+ [6 <./images/mishra7.png>]
+<images/mishra10.png, id=236, 437.2335pt x 381.5856pt>
+File: images/mishra10.png Graphic file (type png)
+<use images/mishra10.png>
+Package pdftex.def Info: images/mishra10.png  used on input line 385.
+(pdftex.def)             Requested size: 244.6937pt x 213.55255pt.
+<images/mishra11.png, id=239, 703.6689pt x 378.213pt>
+File: images/mishra11.png Graphic file (type png)
+<use images/mishra11.png>
+Package pdftex.def Info: images/mishra11.png  used on input line 396.
+(pdftex.def)             Requested size: 244.6937pt x 131.51663pt.
+ [7 <./images/mishra8a.png> <./images/mishra8b.png> <./images/mishra9.png> <./images/mishra10.png>]
+<images/mishra12.png, id=258, 477.9456pt x 629.2308pt>
+File: images/mishra12.png Graphic file (type png)
+<use images/mishra12.png>
+Package pdftex.def Info: images/mishra12.png  used on input line 436.
+(pdftex.def)             Requested size: 244.6937pt x 322.15163pt.
+<images/mishra13.png, id=259, 1075.8594pt x 678.1335pt>
+File: images/mishra13.png Graphic file (type png)
+<use images/mishra13.png>
+Package pdftex.def Info: images/mishra13.png  used on input line 475.
+(pdftex.def)             Requested size: 506.45905pt x 319.22981pt.
+ [8 <./images/mishra11.png> <./images/mishra12.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[8 <./images/optiCoffabsD3.png> <./images/optimalContourD3.png>] (IMEJ-Apr18.bbl
+ [9 <./images/mishra13.png>] (IMEJ-Apr18.bbl
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `en'. Using the pattern for
 ** the default language instead.
@@ -640,7 +610,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `en'. Using the pattern for
 ** the default language instead.
-) [9] (IMEJ-Apr18.aux)
+) [10] (IMEJ-Apr18.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -649,17 +619,17 @@ Package rerunfilecheck Info: File `IMEJ-Apr18.out' has not changed.
 (rerunfilecheck)             Checksum: D734D3CD0C77B77A12C5DC4BF0AD8528;3605.
  ) 
 Here is how much of TeX's memory you used:
- 14531 strings out of 467867
- 237057 string characters out of 5428392
- 711718 words of memory out of 5000000
- 43143 multiletter control sequences out of 15000+600000
- 664203 words of font info for 123 fonts, out of 8000000 for 9000
+ 14184 strings out of 467867
+ 231215 string characters out of 5428392
+ 698994 words of memory out of 5000000
+ 42804 multiletter control sequences out of 15000+600000
+ 662443 words of font info for 121 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 69i,19n,79p,1634b,644s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on IMEJ-Apr18.pdf (9 pages, 6639980 bytes).
+ 75i,19n,79p,1639b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on IMEJ-Apr18.pdf (10 pages, 7656732 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
- 79 named destinations out of 1000 (max. 500000)
+ 396 PDF objects out of 1000 (max. 8388607)
+ 80 named destinations out of 1000 (max. 500000)
  239 words of extra memory for PDF output out of 10000 (max. 10000000)
 

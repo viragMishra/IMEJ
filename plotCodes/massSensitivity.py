@@ -3,6 +3,8 @@ import pandas as pd
 from pathlib import Path
 
 
+plt.rcParams.update({"font.size": 16})
+
 data = [
 	(0.75, 5.5, 329.43, 330.25),
 	(0.75, 7.5, 232.48, 231.96),
@@ -51,7 +53,13 @@ def make_heatmap(value_column, title, color_map, output_file, value_format):
 		if value_column == "% Reduction"
 		else value_column
 	)
-	figure.colorbar(image, ax=axis, label=legend_label)
+	figure.colorbar(
+		image,
+		ax=axis,
+		orientation="horizontal",
+		label=legend_label,
+		pad=0.12,
+	)
 	axis.set_xticks(range(len(tp_values)), labels=tp_values)
 	axis.set_yticks(range(len(hs_values)), labels=hs_values)
 	axis.set_xlabel("Tp")

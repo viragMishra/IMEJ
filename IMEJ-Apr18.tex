@@ -27,12 +27,12 @@
 \usepackage{url}
 \usepackage{xcolor}
 \usepackage[english]{babel}
-\usepackage[switch]{lineno}
+% \usepackage[switch]{lineno}
 \usepackage[colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue]{hyperref}
 \hyphenation{infla-mmable}
 
 \begin{document}
-\linenumbers
+% \linenumbers
 \bstctlcite{IEEEexample:BSTcontrol}
 %
 \newcommand{\IMEJpaperid}{PAPER-ID}
@@ -78,7 +78,7 @@ PROCEEDINGS OF THE INTERNATIONAL CONFERENCE ON OCEAN ENERGY \& OCEAN ENERGY EURO
 \maketitle
 
 \begin{abstract}
-Recent developments in self-reacting oscillating Wave Energy Convertors (WECs) point toward two popular design concepts. These designs are either a semi-submerged system in which a surface piercing float reacts against a relatively still heave plate or a single body system that reacts against the ocean floor.  The first design employs a rigid spar connection between the actuator and the reaction body; however, the second design uses a flexible tether connection between the actuator and the foundation. In this work, a two-body sub-surface WEC is proposed in which the submerged float reacts against a base that is actively dynamic. The dynamics of the reacting body is influenced by both the buoyancy parameters and the PTO generated tether tension. As a result, the two-body system oscillates either out-of-phase or in an antipodal mode. The optimal hydrostatic conditions that result in a design that can generate mechanical power, in single degree of freedom motion, under the wave excitation are discussed in this work. Multiple design candidates are evaluated under different wave conditions and exhaustive sensitivity analyses are carried out on various design parameters. The hydrodynamic analysis is carried out for different wave conditions observed off different coasts of the US. Optimal PTO parameters are determined for various designs. The hydrodynamic and time domain analyses is carried out using~\enquote{Ansys-Aqwa\textregistered{}}.\\
+Recent developments in self-reacting oscillating Wave Energy Convertors (WECs) point toward two popular design concepts. These designs are either a semi-submerged system in which a surface piercing float reacts against a relatively still heave plate or a single body system that reacts against the ocean floor.~The first design employs a rigid spar connection between the actuator and the reaction body; however, the second design uses a flexible tether connection between the actuator and the foundation.~In this work, a two-body sub-surface WEC is proposed in which the submerged float reacts against a base that is actively dynamic.~The dynamics of the reacting body is influenced by both the buoyancy parameters and the PTO generated tether tension.~As a result, the two-body system oscillates either out-of-phase or in-phase mode.~The optimal hydrostatic conditions that result in a design that can generate mechanical power, in single degree of freedom motion, under the wave excitation are discussed in this work.~Multiple design candidates are evaluated under different wave conditions and exhaustive sensitivity analyses are carried out on various design parameters.~The hydrodynamic analysis is carried out for different wave conditions observed off different coasts of the US.~Optimal PTO parameters are determined for various designs.~The hydrodynamic and time domain analyses is carried out using~\enquote{Ansys-Aqwa\textregistered{}}.\\
 \end{abstract}
 
 \begin{IMEJkeywords}
@@ -103,7 +103,7 @@ This paper provides an overview of the initial design process of such a device. 
 The WEC design under study is a two-body point absorber consisting of a submerged float and a heave plate. The design of the WEC supports the sub-surface operation.~Sketch of the primary components used in the numerical modelling are shown in~\figref{fig_QP}. The float and heave plate are connected by a tether which is attached to the top of the heave plate and the bottom of the float. The heave plate is moored to the sea bed using a mooring line. The mooring line is attached to the bottom of the heave plate and the other end is attached to a foundation on the sea bed. The tether and mooring line are assumed to be linear elastic with a stiffness of $k$ and $0.1k$ respectively. The tether and mooring line are assumed to be massless and inextensible.
 \begin{figure}[!t]
 \centering
-\includegraphics[scale=1.6]{images/design.png}
+\includegraphics[scale=1.6]{images/mishra1.png}
 \caption{Sketch of the two-body sub-surface WEC under analysis}
 \label{fig_QP}
 \end{figure}
@@ -111,7 +111,7 @@ The WEC design under study is a two-body point absorber consisting of a submerge
 To determine optimal device configuration multiple designs were analyzed. In this paper preliminary results for some of the designs considered are discussed and compared. The relative dimensions of the float and the heave plate for various designs considered are shown in~\figref{fig_rectangle_comparison}. A summary of the important dimensions and characteristics of these designs are presented in~\tabref{tab:design_parameters}. $R_f$ and $R_{hp}$ are the radius of float and heave plate respectively and $H_f$, $H_{hp}$ are the height of float and heave plate. Similarly, $W_f$ and $W_{hp}$ are the weight of the float and heave plate. The primary difference between various designs is that the total weight of the design D0 was $8000~\mathrm{kg}$, however other designs are comparatively lighter in the range $2100~\mathrm{kg}$ (D1, D2), $2500~\mathrm{kg}$ (D3, D4) and $2966~\mathrm{kg}$~(D5, D6). The tether tension in the design D0 was $23696~\mathrm{N}$, which would increase the CAPEX, as the cost is directly proportional to the tether cost. However, the tether tension in other designs is significantly lower.
 \begin{figure*}[!t]
 \centering
-\includegraphics[width=\textwidth]{images/rectangle_comparison.png}
+\includegraphics[width=\textwidth]{images/mishra2.png}
 \caption{Representative dimensions and designs of the float and heave plate for hydrodynamic analysis. The heave plate and float were connected to the tether not shown in the above image.}
 \label{fig_rectangle_comparison}
 \end{figure*}
@@ -209,7 +209,7 @@ A User Defined Function (UDF) is an external program that can be called from Aqw
 For each design and every sea state, \(58\) combinations of stiffness and damping coefficients were used in the simulations.~\figref{fig_knB} shows the various combinations of PTO parameters considered in this analysis.
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.48\textwidth]{images/knB.png}
+\includegraphics[width=0.48\textwidth]{images/mishra3.png}
 \caption{Various combinations of PTO parameters considered in the analysis.}
 \label{fig_knB}
 \end{figure}
@@ -224,7 +224,7 @@ Current approaches neither develop a multidimensional probabilistic description 
 A set of \(18\) sea states, shown in~\figref{fig_18seas}, was used throughout the analysis in this report. Wave elevations were generated using the Bretschneider spectrum. Although these wave datasets do not all correspond to the same water depth (ranges from \(42~\mathrm{m}\) to \(149~\mathrm{m}\)), they provide a useful indication of WEC performance across varied wave profiles, since the same set of sea states is applied at each location shown in~\figref{fig_location}. Note that when the weights associated with the $18$ sea states are used, they account for varying percentages of the total joint probability distribution (\(67\%-95\%\)), depending on location. This is because, at some locations, a significant portion of the year falls into a sea states not represented within any of the \(18\) sea states considered.
 \begin{figure}[htbp]
 \centering
-\includegraphics[height=0.17\textwidth, width=0.46\textwidth]{images/18seas.png}
+\includegraphics[height=0.17\textwidth, width=0.46\textwidth]{images/mishra4.png}
 \caption{The sea states used for the analysis of WEC performance}
 \label{fig_18seas}
 \end{figure}
@@ -232,7 +232,7 @@ A set of \(18\) sea states, shown in~\figref{fig_18seas}, was used throughout th
 Site specific optimal PTO coefficient for the WEC are determined for each location shown in~\figref{fig_location}. These sites either host a testing facility or a deployment berth and are probable sites for the development of WEC farms.  The significant wave height reported by NDBC (and used here) is the average of the highest one-third of all the wave heights during a \(20\)-minute sampling period. The peak period is the period with maximum energy in the spectrum. The list of the buoy locations chosen for the analysis is presented in~\tabref{tab:nbdc_buoys}.
 \begin{figure}[htbp]
 \centering
-\includegraphics[scale=0.22]{images/locations.png}
+\includegraphics[scale=0.22]{images/mishra5.png}
 \caption{Location of the NDBC buoys used for the analysis of wave climate}
 \label{fig_location}
 \end{figure}
@@ -338,18 +338,18 @@ D3 & Gap & 1.5 & 2 & 27  & \(\mathbf{24.7}\) \\
 \subsection{Verification of PTO models}
 The two PTO models, Cable-Fender and Spring-Damper that were discussed in~\secref{sec:pto_models}, were compared for a single design (D0) under regular and irregular wave conditions. The comparison was made by analyzing the time series of velocity of the float, heave plate and the relative velocity between the two.
 The time series of velocity of the float, heave plate and the relative velocity between the two are shown for designs D0 and D3 in~\figref{fig_regularUDF} and~\figref{fig_irregularUDF} respectively. Regular wave input is used in~\figref{fig_regularUDF}  and irregular wave excitation in~\figref{fig_irregularUDF}. From these plots, it can be said that the results of important parameters obtained from UDF compare well with those obtained from the default solver. Since the UDF is a more flexible and robust model, it is used for all the subsequent simulations.
-\begin{figure}[htbp]
+\begin{figure}[!t]
 \centering
-\includegraphics[scale=0.55]{images/regularUDF.png}
+\includegraphics[width=\columnwidth]{images/mishra6.png}
 \caption{Variation in velocity of float, heave plate and the relative velocity between them for design D0 under regular waves of \(H = 0.5~\mathrm{m}\) and \(T = 5.5~\mathrm{s}\)}
 \label{fig_regularUDF}
 \end{figure}
-\begin{figure}[!t]
+\begin{figure*}[!t]
 \centering
-\includegraphics[scale=0.54]{images/irregUDF.png}
+\includegraphics[width=\textwidth]{images/mishra7.png}
 \caption{Variation in velocity of float, heave plate and the relative velocity between them for design D0 under irregular waves of \(H_s = 0.75~\mathrm{m}\) and \(T_p = 5.5~\mathrm{s}\)}
 \label{fig_irregularUDF}
-\end{figure}
+\end{figure*}
 \subsection{Variation of mass ratio}
 In this sensitivity test the mass of the float and heave plate was varied to study the effect of ratio of mass \( \mathrm{MR} = \mathrm{M}_{\mathrm{F}} / \mathrm{M}_{\mathrm{HP}} \) on the average power absorbed by the wave energy converter for a PTO configuration with stiffness \(k=3000~\mathrm{N/m}~\text{and~damping}~C=2000~\mathrm{Ns/m}\). The variation of the power with \(H_s\) and \(T_p\) is shown in the~\figref{fig_massRatio}. The power increases almost linearly with significant wave height, with progressively steeper slopes at lower mass ratios. At every wave height, the ordering of the curves remains unchanged, indicating that increasing the float-to-heave plate mass ratio reduces the energy captured.
 Similarly, the second subplot shows that the average power decreases approximately linearly as the peak period increases from \(7.5~\mathrm{s}~\text{to}~13.5~\mathrm{s}\). The reduction is substantial across all mass ratios, highlighting that the selected PTO configuration is better tuned to shorter-period waves. The separation between the curves persists throughout the period range, indicating that the effect of mass ratio is largely independent of wave period.
@@ -357,11 +357,11 @@ This study demonstrates that themass ratio acts as an important design parameter
 \begin{figure}[!t]
 \centering
 \subfloat[Variation with significant wave height]{%
-  \includegraphics[width=\columnwidth]{images/MRHs.png}%
+  \includegraphics[width=\columnwidth]{images/mishra8a.png}%
 }
 \par\medskip
 \subfloat[Variation with peak wave period]{%
-  \includegraphics[width=\columnwidth]{images/MRTp.png}%
+  \includegraphics[width=\columnwidth]{images/mishra8b.png}%
 }
 \caption{Variation in average power with mass ratio across the examined sea states.}
 \label{fig_massRatio}
@@ -372,7 +372,7 @@ In this sensitivity test the draft of the float was varied to study the effect o
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=\columnwidth]{images/powerDepth.png}
+\includegraphics[width=\columnwidth]{images/mishra9.png}
 \caption{Substantial decrease in nondimensionalized average power output with increase in float draft, (\(k = 3000 ~\mathrm{N/m}, B = 2000 ~\mathrm{Ns/m}\))~across a range of sea states.}
 \label{fig_powerDepth}
 \end{figure}
@@ -382,7 +382,7 @@ The change in the average power when the float-heave plate gaps (Gap) was reduce
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=\columnwidth]{images/Figure_2_Gap_Percentage_Reduction.png}
+\includegraphics[width=\columnwidth]{images/mishra10.png}
 \caption{Reduction in the average power output of the wave energy converter with decrease in float–heave plate gaps (Gap) from \(25~\mathrm{m}\) to \(15~\mathrm{m}\) and \(10~\mathrm{m}\) across a range of sea states for two PTO configurations, (\(k = 7000 ~\mathrm{N/m}, B = 5000 ~\mathrm{Ns/m}~\text{and}~k = 5000 ~\mathrm{N/m}, B = 4000 ~\mathrm{Ns/m}\)).}
 \label{fig_gapSensitivity}
 \end{figure}
@@ -393,7 +393,7 @@ The values of avg power obtained are shown in~\figref{fig_heavePlateMassSensitiv
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=\columnwidth]{images/heatmap_percent_change.png}
+\includegraphics[width=\columnwidth]{images/mishra11.png}
 \caption{Percentage change in the average power output of the wave energy converter with variation in heave plate mass from \(900~\mathrm{kg}\) to \(800~\mathrm{kg}\) across a range of sea states for design D5.}
 \label{fig_heavePlateMassSensitivity}
 \end{figure}
@@ -431,6 +431,12 @@ The values of the mechanical power generated at various sites and the correspond
   \item In PTO2, it is assumed that the PTO adapts to a combination of the coefficients, so that it produces max power at that sea state.
 \end{itemize} 
 The maximum power is obtained at PacWave followed by Cape Code.~The power obtained using an adaptive PTO (PTO2) is higher compared to the static PTO (PTO1) among all cases and sites. Approximately \(8\%-9\%\) improvement was recorded between the power generated using PTO2. This is expected as the system adapts to the sea state to deliver maximum power. The power obtained with D0 is also higher, compared to any other design. However, due to high tension in the tether, this design might incur higher material cost. D3 seems to be the ideal configuration as it reduces the material cost as well as delivers the required mechanical power. D6 also seems to be a good configuration as it delivers higher power compared to D3, though the material cost is expected to be higher due to the larger float diameter, it is also expected to accommodate all the components of the PTO system.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{images/mishra12.png}
+\caption{Absolute power generated for various PTO coefficients for design D3}
+\label{fig_optiD3abs}
+\end{figure}
 
 \begin{table}[!t]
 \centering
@@ -463,18 +469,13 @@ D6 & PTO1 & \(421\) & \(445\) & \(139\) & \(357\) & \(300\) & \(423\) \\
 \end{tablenotes}
 \end{table}
 
-\begin{figure}[htbp]
+
+\begin{figure*}[!t]
 \centering
-\includegraphics[width=\columnwidth]{images/optiCoffabsD3.png}
-\caption{Absolute power generated for various PTO coefficients for design D3}
-\label{fig_optiD3abs}
-\end{figure}
-\begin{figure}[!h]
-\centering
-\includegraphics[width=\columnwidth]{images/optimalContourD3.png}
-\caption{Optimal contour for PTO coefficients for design D3at various sites}
+\includegraphics[width=\textwidth]{images/mishra13.png}
+\caption{Optimal contour for PTO coefficients for design D3 at various sites}
 \label{fig_optimalContour}
-\end{figure}
+\end{figure*}
 
 When comparing all the sites, D0 design produces a max annual avg power of \(422~\mathrm{W}\) followed by D5 at \(355~\mathrm{W}\) and D3 design which captures \(223~\mathrm{W}\) at a depth of \(2~\mathrm{m}\). The red line in the contour plot represents the acceptable minimum power from the design based on the specification. Based on the contour plots the PTO parameters can be tuned to generate the maximum power for a particular design. Compared to D3, D0 and D5 show a narrow band of optimal PTO coefficient for maximum average power capture.
 
@@ -529,7 +530,7 @@ Overall, the validated numerical model and the comprehensive parametric analyses
 
 % use section* for acknowledgment
 \section*{Acknowledgement}
-This project is funded by the NAVSEA, as a one-year grant to design a sub-surface WEC capable of continuous power generation of \(100~\mathrm{W}\) at various sites with distinct wave characteristics off the coast of the United States. The authors would like to thank Department of Defense, NAVSEA-BEST, NSWCCD, NIWC PAC, NAVFAC EXWC and U.S. DoD contractor Battelle. This work is supported under NAVSEA Contract Number: N66001-18-9-4703.\newline
+This project is funded by the NAVSEA. The authors would like to thank Department of Defense, NAVSEA-BEST, NSWCCD, NIWC PAC, NAVFAC EXWC and U.S. DoD contractor Battelle. This work is supported under NAVSEA Contract Number: N66001-18-9-4703.\newline
 Disclaimer:
 Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the Department of Defense.
 
